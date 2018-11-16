@@ -1,0 +1,18 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page">
+  <view animation="{{animation_1}}" class="activity--1" style="opacity: 1;">
+    <view class="wrapper--bg" bindtap="onTapAc1">
+      <image class="c-img-bg" src="{{bg_1}}" mode="aspectFill"></image>
+    </view>
+  </view>
+  <view animation="{{animation_2}}" class="activity--2" style="opacity: 0;">
+    <view class="wrapper--bg" bindtap="onTapAc2">
+      <image class="c-img-bg" src="{{bg_2}}" mode="aspectFill"></image>
+    </view>
+  </view>
+  <view animation="{{animation_3}}" class="activity--3"  style="opacity: 0;">
+    <view class="wrapper--bg" bindtap="onTapAc3">
+      <image class="c-img-bg" src="{{bg_3}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>

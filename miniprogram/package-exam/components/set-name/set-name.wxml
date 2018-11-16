@@ -1,0 +1,20 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page">
+  <view class="wrapper--content" animation="{{animation}}">
+    <view class="activity--1">
+      <view class="wrapper--bg" bindtap="onTapAc1">
+        <image class="c-img-bg" src="{{bg_1}}" mode="aspectFill"></image>
+      </view>
+    </view>
+    <view class="activity--2">
+      <view class="wrapper--bg" bindtap="onTapAc2">
+        <image class="c-img-bg" src="{{bg_2}}" mode="aspectFill"></image>
+      </view>
+    </view>
+    <view class="activity--3">
+      <view class="wrapper--bg">
+        <image class="c-img-bg" src="{{bg_3}}" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+</view>

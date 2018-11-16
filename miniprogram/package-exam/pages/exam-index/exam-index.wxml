@@ -1,0 +1,6 @@
+<!--pages/chooseLib/chooseLib.wxml-->
+<view class="page">
+  <received-a-call wx:if="{{wantPartIndex == 0}}" bind:switchPart="switchPart"></received-a-call>
+  <set-name wx:if="{{wantPartIndex == 1}}"></set-name>
+</view>
+

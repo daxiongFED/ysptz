@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "接收电话",
+  "usingComponents": {
+    "received-a-call": "../../components/received-a-call/received-a-call",
+    "set-name": "../../components/set-name/set-name"
+  }
+}
