@@ -1,0 +1,25 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page">
+  <view animation="{{animation_1}}" class="activity--1" style="opacity: 1" bindtap="onTapAc1">
+    <view class="wrapper--bg" style="background: red;">
+    </view>
+    <view class="wrapper--content">
+      <view class="text--1">我是第一页</view>
+    </view>
+  </view>
+  <view animation="{{animation_2}}" class="activity--2" style="opacity: 0" bindtap="onTapAc2">
+    <view class="wrapper--bg" style="background: blue;">
+      <image class="c-img-bg" src="{{bg_2}}" mode="aspectFill"></image>
+    </view>
+    <view class="wrapper--content">
+      <view class="text--1">我是第二页</view>
+    </view>
+  </view>
+  <view animation="{{animation_3}}" class="activity--3" style="opacity: 1" bindtap="onTapAc3">
+    <view class="wrapper--bg" style="background: yellow;">
+    </view>
+    <view class="wrapper--content">
+      <view class="text--1">我是第三页</view>
+    </view>
+  </view>
+</view>

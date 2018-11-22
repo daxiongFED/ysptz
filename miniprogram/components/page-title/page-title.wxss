@@ -1,0 +1,6 @@
+/* companents/title-bar/title-bar.wxss */
+@import '../../app.wxss';
+
+.page_wrapper {
+  
+}

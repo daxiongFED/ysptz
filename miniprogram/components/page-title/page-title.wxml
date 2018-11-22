@@ -1,0 +1,4 @@
+<!--companents/title-bar/title-bar.wxml-->
+<view class="page_wrapper">
+  <slot></slot>
+</view>
