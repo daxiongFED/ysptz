@@ -10,10 +10,12 @@ Component({
    */
   data: {
     windowHeight: getApp().globalData.windowHeight,
+    background_2: "/images/background_2.png",
     bg_1: "/package-exam/res/set-name/bg_name_1.png",
     bg_2: "/package-exam/res/set-name/bg_name_2.png",
     bg_3: "/package-exam/res/set-name/bg_name_3.png",
 
+    show_setNameCover: false,
     curActivityIndex: 1
   },
 
@@ -61,6 +63,9 @@ Component({
       return Animation.export();
     },
 
+    onTapSetName() {
+      this.setData({show_setNameCover: true});
+    },
     
   }
 });

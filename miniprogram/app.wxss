@@ -5,3 +5,18 @@
   align-items: center;
   box-sizing: border-box;
 } 
+.g__button--select {
+  background: linear-gradient(to right, #D5DC21, #F8EA21 , #F7AC3B);
+  width: 514rpx;
+  height: 72rpx;
+  border-radius: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-weight: 600;
+  font-size: 35rpx;
+}
+.g__button--select:active {
+  color: #fff;
+}

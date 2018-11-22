@@ -1,7 +1,8 @@
 {
-  "navigationBarTitleText": "接收电话",
   "usingComponents": {
+    "page-title": "/components/page-title/page-title",
     "received-a-call": "../../components/received-a-call/received-a-call",
-    "set-name": "../../components/set-name/set-name"
+    "set-name": "../../components/set-name/set-name",
+    "fade-in-page": "../../components/fade-in-page/fade-in-page"
   }
 }

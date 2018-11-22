@@ -1,19 +1,14 @@
 /* package-exam/components/received-a-call/received-a-call.wxss */
+@import '../../../app.wxss';
 .page {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-.wrapper--bg {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
 .c-img-bg {
   width: 100%;
   height: 100vh;
 }
-
 .activity--1, .activity--2, .activity--3 {
   position: absolute;
   top: 0;
@@ -28,4 +23,83 @@
 }
 .activity--3 {
   z-index: 1;
+}
+.wrapper__bg {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper__content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  color: #fff;
+}
+.wrapper__content--1 .text--1 {
+  font-size: 52rpx;
+  margin-top: 35vh;
+}
+.wrapper__content--1 .text--2 {
+  font-size: 52rpx;
+}
+.wrapper__content--1 .text--3 {
+  font-size: 24rpx;
+}
+.wrapper__content--1 .text--4 {
+  font-size: 24rpx;
+  position: absolute;
+  bottom: 50rpx;
+}
+.wrapper__content--2 .text--1 {
+  font-size: 76rpx;
+  margin-top: 12vh;
+}
+.wrapper__content--2 .text--2 {
+  font-size: 30rpx;
+  margin-top: 22rpx;
+}
+.wrapper__content--2 .text--3 {
+  font-size: 30rpx;
+  margin-top: 5rpx;
+}
+.wrapper__content--2 .buttons {
+  font-size: 24rpx;
+  position: absolute;
+  bottom: 150rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wrapper__content--2 .buttons image {
+  width: 128rpx;
+  height: 128rpx;
+}
+.wrapper__content--2 .buttons .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 100rpx;
+}
+.wrapper__content--2 .buttons .label {
+  margin-top: 30rpx;
+}
+.wrapper__content--3 .text--1 {
+  font-size: 76rpx;
+  margin-top: 12vh;
+}
+.wrapper__content--3 .area__button--select{
+  position: absolute;
+  bottom: 100rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.g__button--select {
+  margin: 20rpx 0;
 }

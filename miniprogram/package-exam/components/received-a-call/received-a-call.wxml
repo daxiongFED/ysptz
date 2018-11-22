@@ -1,18 +1,51 @@
 <!-- package-exam/components/received-a-call/received-a-call.wxml -->
 <view class="page">
-  <view animation="{{animation_1}}" class="activity--1" style="opacity: 1;">
-    <view class="wrapper--bg" bindtap="onTapAc1">
-      <image class="c-img-bg" src="{{bg_1}}" mode="aspectFill"></image>
+  <view animation="{{animation_1}}" class="activity--1" style="opacity: 1;"  bindtap="onTapAc1">
+    <view class="wrapper--bg">
+      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+    </view>
+    <view class="wrapper__content wrapper__content--1">
+      <view class="text--1">某天</view>
+      <view class="text--2">你接到一个陌生电话</view>
+      <view class="text--3">需打开手机声音体验</view>
+      <view class="text--4">轻触继续</view>
     </view>
   </view>
   <view animation="{{animation_2}}" class="activity--2" style="opacity: 0;">
-    <view class="wrapper--bg" bindtap="onTapAc2">
-      <image class="c-img-bg" src="{{bg_2}}" mode="aspectFill"></image>
+    <view class="wrapper--bg">
+      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+    </view>
+    <view class="wrapper__content wrapper__content--2">
+      <text class="text--1">186 6613 1320</text>
+      <text class="text--2">广东省 珠海市</text>
+      <view class="text--3">未知号码</view>
+      <view class="buttons">
+        <view class="button">
+          <image mode="aspectFill" src="{{phone_reject}}"></image>
+          <view class="label">拒绝</view>
+        </view>
+        <view class="button" bindtap="onTapAc2">
+          <image mode="aspectFill" src="{{phone_accept}}"></image>
+          <view class="label">接受</view>
+        </view>
+      </view>
     </view>
   </view>
-  <view animation="{{animation_3}}" class="activity--3"  style="opacity: 0;">
-    <view class="wrapper--bg" bindtap="onTapAc3">
-      <image class="c-img-bg" src="{{bg_3}}" mode="aspectFill"></image>
+  <!--  bindtap="onTapAc3" -->
+  <view animation="{{animation_3}}" class="activity--3"  style="opacity: 0">
+    <view class="wrapper--bg">
+      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+    </view>
+    <view class="wrapper__content wrapper__content--3">
+      <view class="text--1">音频波动条</view>
+      <view class="text--2">
+        <view class="icon--retry"></view>
+        <view class="text">再听一次</view>
+      </view>
+      <view class="area__button--select">
+        <view class="g__button--select" bindtap="onTapAc3">好的，明天一定准时到</view>
+        <view class="g__button--select">要核实一下是哪位找我</view>
+      </view>
     </view>
   </view>
 </view>

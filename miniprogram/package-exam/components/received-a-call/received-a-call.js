@@ -9,6 +9,11 @@ Component({
    * 组件的初始数据
    */
   data: {
+    opacity: 0,
+    background_1: "/images/background_1.png",
+    phone_reject: "/package-exam/res/received-a-call/phone_reject.png",
+    phone_accept: "/package-exam/res/received-a-call/phone_accept.png",
+    
     bg_1: "/package-exam/res/received-a-call/bg_call_1.png",
     bg_2: "/package-exam/res/received-a-call/bg_call_2.png",
     bg_3: "/package-exam/res/received-a-call/bg_call_3.png",
@@ -22,6 +27,7 @@ Component({
   methods: {
     onTapAc1() {
       this.switchActivity(2);
+      // this.opacity_worker(400);
     },
     onTapAc2() {
       this.switchActivity(3);
@@ -58,7 +64,8 @@ Component({
         delay: 0,
         transformOrigin: "ease-out"
       });
-      Animation.opacity(1).step();
+      Animation.opacity(0.9).step();
+      // Animation.top(0).step();
       return Animation.export();
     },
     anmt_fadeOut() {
@@ -69,7 +76,21 @@ Component({
         transformOrigin: "ease-out"
       });
       Animation.opacity(0).step().top(100000).step();
+      // Animation.top(1000).step();
       return Animation.export();
+    },
+
+    opacity_worker(duration) {
+      let opacity = 0;
+      let interval = duration / 16;
+      let oneTimeChange = 16 / duration;
+      const pooling = setInterval(()=>{
+        opacity += oneTimeChange;
+        this.setData({opacity: opacity});
+        if (opacity == 1) {
+          clearInterval(pooling);
+        }
+      }, interval);
     },
 
     

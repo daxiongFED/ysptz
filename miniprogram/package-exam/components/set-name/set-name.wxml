@@ -3,8 +3,24 @@
   <view class="wrapper--content" animation="{{animation}}">
     <view class="activity--1">
       <view class="wrapper--bg" bindtap="onTapAc1">
-        <image class="c-img-bg" src="{{bg_1}}" mode="aspectFill"></image>
+        <image class="c-img-bg" src="{{background_2}}" mode="aspectFill"></image>
       </view>
+      <view class="wrapper__content wrapper__content--1">
+        <!-- <view class="circle"> -->
+        <view class="container">
+            <view class="circle" bindtap="onTapSetName">
+              <view class="circle__name" hidden="{{show_setNameCover}}">
+                <view class="circle__name--1">你的</view>
+                <view class="circle__name--2">名字</view>
+              </view>
+            </view>
+            <!-- <view class="pulse_1"></view> -->
+            <view class="pulse_2" hidden="{{show_setNameCover}}"></view>
+        </view>
+      </view>
+      <view hidden="{{!show_setNameCover}}">
+        <set-name-cover></set-name-cover>
+      </view>>
     </view>
     <view class="activity--2">
       <view class="wrapper--bg" bindtap="onTapAc2">
