@@ -17,12 +17,37 @@
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
   color: #fff;
 }
-.wrapper__content .text--1 {
-  font-size: 76rpx;
-  margin-top: 12vh;
+.block--1 {
+  color: #333;
+  font-weight: 600;
+  margin: 80rpx 100rpx 60rpx;
+}
+.block--1__name {
+  font-size: 60rpx;
+}
+.block--1__text {
+  font-size: 38rpx;
+}
+.block--2 {
+  margin: 80rpx 100rpx 60rpx;
+  width: 560rpx;
+  position: relative;
+  color: #fff;
+}
+.block--2__quotes--big {
+  position: absolute;
+  font-size: 60rpx;
+}
+.block--2__quotes--big.left {
+  top: 0;
+  left: -60rpx;
+}
+.block--2__quotes--big.right {
+  bottom: 0;
+  right: -60rpx;
 }
 .block--3 {
   width: 100%;
