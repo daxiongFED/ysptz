@@ -5,6 +5,7 @@
     <page_1 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 1}}"></page_1>
     <page_2 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 2}}"></page_2>
     <page_3 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 3}}"></page_3>
+    <page_4 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 4}}"></page_4>
     <received-a-call
       wx:if="{{wantPartIndex == 0}}"
       bind:switchPart="switchPart"

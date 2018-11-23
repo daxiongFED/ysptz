@@ -20,5 +20,15 @@ Component({
       const sex = e.currentTarget.dataset.sex;
       this.setData({sex});
     },
+    onTapSubmit(e) {
+      console.log(e);
+      const name = e.detail.value.name;
+      const formId = e.detail.formId;
+      this.setData({name});
+      this.onSetName();
+    },
+    onSetName() {
+      this.triggerEvent('switchPage', 5);
+    },
   }
 });

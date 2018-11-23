@@ -1,7 +1,7 @@
 <!-- package-exam/components/received-a-call/received-a-call.wxml -->
 <view class="cover">
   <view class="cover__content">
-    <form bindsubmit="formSubmit" report-submit="true">
+    <form bindsubmit="onTapSubmit" report-submit="true">
       <view class="content__center">
         <view class="center__input--name">
           <input class='input' type="text" name="name" placeholder="输入你的虚拟名字" placeholder-class='placeholder_class' maxlength="5"></input>
