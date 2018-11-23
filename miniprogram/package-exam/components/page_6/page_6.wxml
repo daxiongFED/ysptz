@@ -1,0 +1,8 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page">
+  <view class="wrapper--content" animation="{{animation}}">
+    <view class="wrapper--bg" bindtap="onTapAc1">
+      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>

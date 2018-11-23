@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "page-title": "/components/page-title/page-title",
+    "page_1": "../../components/page_1/page_1",
+    "page_2": "../../components/page_2/page_2",
     "received-a-call": "../../components/received-a-call/received-a-call",
     "set-name": "../../components/set-name/set-name",
     "fade-in-page": "../../components/fade-in-page/fade-in-page"

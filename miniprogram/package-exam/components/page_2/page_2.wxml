@@ -1,0 +1,21 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page">
+  <view class="wrapper--bg">
+    <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  </view>
+  <view class="wrapper__content">
+    <text class="text--1">186 6613 1320</text>
+    <text class="text--2">广东省 珠海市</text>
+    <view class="text--3">未知号码</view>
+    <view class="buttons">
+      <view class="button">
+        <image mode="aspectFill" src="{{phone_reject}}"></image>
+        <view class="label">拒绝</view>
+      </view>
+      <view class="button" bindtap="onTapPage">
+        <image mode="aspectFill" src="{{phone_accept}}"></image>
+        <view class="label">接受</view>
+      </view>
+    </view>
+  </view>
+</view>

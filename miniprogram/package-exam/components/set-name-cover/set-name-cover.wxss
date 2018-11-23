@@ -62,7 +62,7 @@
 }
 .content__bottom {
   position: absolute;
-  bottom: 78rpx;
+  bottom: 150rpx;
   width: 100%;
   display: flex;
   justify-content: center;

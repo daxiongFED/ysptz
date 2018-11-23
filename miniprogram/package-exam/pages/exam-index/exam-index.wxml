@@ -2,6 +2,8 @@
 <!-- 易受骗体质 -->
 <page-title title="">
   <view class="page">
+    <page_1></page_1>
+    <page_2></page_2>
     <received-a-call
       wx:if="{{wantPartIndex == 0}}"
       bind:switchPart="switchPart"
