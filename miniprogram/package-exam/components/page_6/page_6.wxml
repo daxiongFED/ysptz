@@ -1,8 +1,24 @@
 <!-- package-exam/components/received-a-call/received-a-call.wxml -->
 <view class="page">
-  <view class="wrapper--content" animation="{{animation}}">
-    <view class="wrapper--bg" bindtap="onTapAc1">
-      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  <view class="wrapper--bg">
+    <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  </view>
+  <view class="wrapper__content">
+    <view class="header">
+      <view class="icon_arrow"></view>
+      <view class="text">新信息</view>
+      <view class="icon_info"></view>
     </view>
+    <view class="body">
+      <text class="time">周三 下午10:17</text>
+      <view class="massage">
+        在家就能挣钱，不用任何投入，轻松做兼职，帮京东、淘宝卖家刷信誉冲销量赚佣金。
+      </view>
+      <view class="massage">
+        点击链接<view>aitaobao.cc/C7bMam-ov9zBkG</view>购买商品付款后，客服支付宝退全款返高额佣金给你
+      </view>
+      <view class="tap_tips"></view>
+    </view>
+    <view class="footer"></view>
   </view>
 </view>

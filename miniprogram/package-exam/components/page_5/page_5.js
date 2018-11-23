@@ -17,7 +17,7 @@ Component({
    */
   methods: {
     onTapButton() {
-      this.triggerEvent('switchPage', 4);
+      this.triggerEvent('switchPage', 6);
     },
   }
 });

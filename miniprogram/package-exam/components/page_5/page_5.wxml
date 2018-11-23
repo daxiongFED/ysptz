@@ -14,14 +14,15 @@
         <text class="row--1__text">我是你孩子的<text class="text--yellow">班主任李老师</text>。你孩子得</text>
         <text class="row--2__text">了<text class="text--yellow">急性肠胃炎</text>，现在正在医院</text>
         <text class="row--3__text"><text class="text--yellow">抢救</text>。你赶紧汇 5000 元到某</text>
-        <text class="row--4__text">银行卡，不要<text class="text--yellow">耽误治疗</text></text>
+        <text class="row--4__text">银行卡，不要<text class="text--yellow">耽误治疗</text>。</text>
       </view>
       <view class="block--2__quotes--big right">”</view>
     </view>
     <view class="block--3">
       <view class="area__button--select">
-        <view class="g__button--select" bindtap="onTapButton">好的，明天一定准时到</view>
-        <view class="g__button--select" bindtap="onTapButton">要核实一下是哪位找我</view>
+        <view class="g__button--select" bindtap="onTapButton">宝贝孩子生命要进，立即按李老师要求将钱汇到银行卡中</view>
+        <view class="g__button--select" bindtap="onTapButton">回拨对方提供的班主任李老师的电话，向李老师核实一下孩子的情况</view>
+        <view class="g__button--select" bindtap="onTapButton">先赶往学校，了解事情的起因后再决定</view>
       </view>
     </view>
   </view>

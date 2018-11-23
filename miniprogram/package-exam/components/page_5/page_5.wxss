@@ -29,7 +29,7 @@
   font-size: 60rpx;
 }
 .block--1__text {
-  font-size: 38rpx;
+  font-size: 32rpx;
 }
 .block--2 {
   margin: 80rpx 100rpx 60rpx;
@@ -42,19 +42,32 @@
   font-size: 60rpx;
 }
 .block--2__quotes--big.left {
-  top: 0;
-  left: -60rpx;
+  top: -20rpx;
+  left: -80rpx;
 }
 .block--2__quotes--big.right {
   bottom: 0;
   right: -60rpx;
+}
+.block--2__row--1 {
+  font-size: 43rpx;
+}
+.row--1__text {
+  font-size: 32rpx;
+}
+.row--1__text, .row--2__text, .row--3__text, .row--4__text, .row--5__text {
+  display: block;
+  margin: 10rpx 0;
+}
+.block--2__row--1 .text--yellow {
+  color: #FFFF00;
 }
 .block--3 {
   width: 100%;
 }
 .wrapper__content .area__button--select{
   position: absolute;
-  bottom: 100rpx;
+  bottom: 60rpx;
   width: 100%;
   display: flex;
   align-items: center;
@@ -62,4 +75,5 @@
 }
 .g__button--select {
   margin: 20rpx 0;
+  height: 140rpx;
 }
