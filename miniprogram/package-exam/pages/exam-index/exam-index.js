@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    wantPartIndex: 1,
+    wantPageIndex: 1,
   },
 
   /**
@@ -65,7 +65,7 @@ Page({
   },
   
   // 切换模块
-  switchPart(e) {
-    this.setData({wantPartIndex: e.detail});
+  switchPage(e) {
+    this.setData({wantPageIndex: e.detail});
   },
 })
