@@ -24,6 +24,9 @@
   font-size: 76rpx;
   margin-top: 12vh;
 }
+.block--3 {
+  width: 100%;
+}
 .wrapper__content .area__button--select{
   position: absolute;
   bottom: 100rpx;

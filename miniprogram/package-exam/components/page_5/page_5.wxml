@@ -4,14 +4,25 @@
     <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
   </view>
   <view class="wrapper__content">
-    <view class="text--1">音频波动条</view>
-    <view class="text--2">
-      <view class="icon--retry"></view>
-      <view class="text">再听一次</view>
+    <view class="block--1">
+      <view class="block--1__name">王大路</view>
+      <view class="block--1__text">周二，你接到一个陌生电话</view>
     </view>
-    <view class="area__button--select">
-      <view class="g__button--select" bindtap="onTapButton">好的，明天一定准时到</view>
-      <view class="g__button--select" bindtap="onTapButton">要核实一下是哪位找我</view>
+    <view class="block--2">
+      <view class="block--2__quotes--big">“</view>
+      <view class="block--2__row--1">
+        <text class="row--1__text">我是你孩子的<view class="text--yellow">班主任李老师</view>。你孩子得</text>
+        <text class="row--2__text">了<view class="text--yellow">急性肠胃炎</view>，现在正在医院</text>
+        <text class="row--3__text"><view class="text--yellow">抢救</view>。你赶紧汇 5000 元到某</text>
+        <text class="row--4__text">银行卡，不要<view class="text--yellow">耽误治疗</view></text>
+      </view>
+      <view class="block--2__quotes--big">”</view>
+    </view>
+    <view class="block--3">
+      <view class="area__button--select">
+        <view class="g__button--select" bindtap="onTapButton">好的，明天一定准时到</view>
+        <view class="g__button--select" bindtap="onTapButton">要核实一下是哪位找我</view>
+      </view>
     </view>
   </view>
 </view>
