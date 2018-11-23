@@ -28,7 +28,7 @@ Component({
       this.onSetName();
     },
     onSetName() {
-      this.triggerEvent('switchPage', 5);
+      this.triggerEvent('onSetName');
     },
   }
 });
