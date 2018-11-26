@@ -7,7 +7,7 @@
 } 
 .g__button--select {
   background: linear-gradient(to right, #D5DC21, #F8EA21 , #F7AC3B);
-  width: 514rpx;
+  width: 560rpx;
   height: 72rpx;
   border-radius: 36rpx;
   display: flex;

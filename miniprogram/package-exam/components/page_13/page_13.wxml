@@ -1,0 +1,20 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page">
+    <view class="wrapper--bg">
+      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+    </view>
+    <view class="wrapper__content">
+      <view class="block--1">
+        <view class="block--1__name">警务常识题</view>
+        <view class="block--1__text">以下那个说法是正确的？</view>
+      </view>
+      <view class="block--3">
+        <view class="area__button--select">
+          <view class="g__button--select" bindtap="onTapButton">能获得照片、户籍资料等准确个人信息的，不只有公安机关</view>
+          <view class="g__button--select" bindtap="onTapButton">公安民警可以用QQ、微信、邮箱、链接等网络渠道发送通缉令给嫌疑人</view>
+          <view class="g__button--select" bindtap="onTapButton">被警方通缉的嫌疑人，只要选择与警方合作就可以避免被抓捕</view>
+          <view class="g__button--select" bindtap="onTapButton">重、特大刑事案件，应当由公、检、法机关联合侦办</view>
+        </view>
+      </view>
+    </view>
+  </view>

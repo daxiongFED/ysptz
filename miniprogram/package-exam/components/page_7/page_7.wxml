@@ -1,0 +1,21 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page" bindtap="onTapPage">
+  <view class="wrapper--bg">
+    <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  </view>
+  <view class="wrapper__content">
+    <view class="block--1">
+      <view class="block--1__name">王大路</view>
+      <view class="block--1__text">周四，你接到一个自称通讯局的电话</view>
+    </view>
+    <view class="block--2">
+      <image src="{{article_1}}" mode="widthFix"></image>
+      <view class="block--2__text">随后，电话中所谓的警官告诉你：</view>
+      <image src="{{article_2}}" mode="widthFix"></image>
+      <view class="block--2_tips">轻触继续</view>
+    </view>
+  </view>
+  <view hidden="{{!showMsgCover}}">
+    <msg-cover_2 bind:onTapButton="onTapButton"></msg-cover_2>
+  </view>
+</view>

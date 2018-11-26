@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "msg-cover_1": "../msg-cover_1/msg-cover_1"
+    "msg-cover_2": "../msg-cover_2/msg-cover_2"
   }
 }

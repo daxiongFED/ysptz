@@ -1,0 +1,20 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page">
+    <view class="wrapper--bg">
+      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+    </view>
+    <view class="wrapper__content">
+      <view class="block--1">
+        <view class="block--1__name">网络常识题</view>
+        <view class="block--1__text">以下哪个说法是正确的？</view>
+      </view>
+      <view class="block--3">
+        <view class="area__button--select">
+          <view class="g__button--select" bindtap="onTapButton">通过百度搜索到的信息都是真的</view>
+          <view class="g__button--select" bindtap="onTapButton">政府机关、银行和航空公司的网站是不可以伪造的</view>
+          <view class="g__button--select" bindtap="onTapButton">在网络上跟你视频聊天的好友，不一定是你那个好友</view>
+          <view class="g__button--select" bindtap="onTapButton">网络交友认识的朋友，经过一段时间的交往，是可以信任的</view>
+        </view>
+      </view>
+    </view>
+  </view>

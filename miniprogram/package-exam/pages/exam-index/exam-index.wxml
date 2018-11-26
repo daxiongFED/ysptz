@@ -8,10 +8,12 @@
     <page_4 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 4}}"></page_4>
     <page_5 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 5}}"></page_5>
     <page_6 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 6}}"></page_6>
-    <received-a-call
-      wx:if="{{wantPartIndex == 0}}"
-      bind:switchPart="switchPart"
-    ></received-a-call>
-    <set-name wx:if="{{wantPartIndex == 1}}"></set-name>
+    <page_7 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 7}}"></page_7>
+    <page_8 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 8}}"></page_8>
+    <page_9 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 9}}"></page_9>
+    <page_10 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 10}}"></page_10>
+    <page_11 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 11}}"></page_11>
+    <page_13 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 13}}"></page_13>
+    <page_14 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 14}}"></page_14>
   </view>
 </page-title>

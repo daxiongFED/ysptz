@@ -1,0 +1,14 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page" bindtap="onTapPage">
+  <view class="wrapper--bg">
+    <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  </view>
+  <view class="wrapper__content wrapper__content--1">
+    <view class="text--1">王大路</view>
+    <view class="text--2">到目前为止，</view>
+    <view class="text--2">你做的都还不错。</view>
+    <view class="text--2">快完成了，</view>
+    <view class="text--2">来点简单的。</view>
+    <view class="text--3">轻触继续</view>
+  </view>
+</view>

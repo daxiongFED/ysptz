@@ -1,5 +1,5 @@
 <!-- package-exam/components/received-a-call/received-a-call.wxml -->
-<view class="page">
+<view class="page" bindtap="onTapPage">
   <view class="wrapper--bg">
     <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
   </view>
@@ -22,5 +22,8 @@
     <view class="footer">
       <image src="{{msg_footer}}" mode="widthFix"></image>
     </view>
+  </view>
+  <view hidden="{{!showMsgCover}}">
+    <msg-cover_1 bind:onTapButton="onTapButton"></msg-cover_1>
   </view>
 </view>
