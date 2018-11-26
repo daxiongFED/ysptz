@@ -5,24 +5,22 @@
   </view>
   <view class="wrapper__content">
     <view class="header">
-      <view class="icon_arrow"></view>
-      <view class="text">新信息</view>
-      <view class="icon_info"></view>
+      <image src="{{msg_header}}" mode="widthFix"></image>
     </view>
     <view class="body">
       <text class="time">周三 下午10:17</text>
-      <view class="massage">
-        在家就能挣钱，不用任何投入，轻松做兼职，帮京东、淘宝卖家刷信誉冲销量赚佣金。
+      <view class="message">
+        <!-- 在家就能挣钱，不用任何投入，轻松做兼职，帮京东、淘宝卖家刷信誉冲销量赚佣金。 -->
+        <image src="{{msg_body_1}}" mode="widthFix"></image>
       </view>
-      <view class="massage">
-        点击链接<view>aitaobao.cc/C7bMam-ov9zBkG</view>购买商品付款后，客服支付宝退全款返高额佣金给你，立即加客服QQ1001011加入兼职赚钱。
+      <view class="message">
+        <!-- 点击链接<view>aitaobao.cc/C7bMam-ov9zBkG</view>购买商品付款后，客服支付宝退全款返高额佣金给你，立即加客服QQ1001011加入兼职赚钱。 -->
+        <image src="{{msg_body_2}}" mode="widthFix"></image>
       </view>
       <view class="tap_tips">轻触继续</view>
     </view>
     <view class="footer">
-      <view class="icon_camera"></view>
-      <view class="bar--msg">新信息</view>
-      <view class="icon_microphone"></view>
+      <image src="{{msg_footer}}" mode="widthFix"></image>
     </view>
   </view>
 </view>

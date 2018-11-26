@@ -10,6 +10,10 @@ Component({
    */
   data: {
     background_1: "/images/background_1.png",
+    msg_header: "/package-exam/res/msg_header.png",
+    msg_footer: "/package-exam/res/msg_footer.png",
+    msg_body_1: "/package-exam/res/msg_body_1.png",
+    msg_body_2: "/package-exam/res/msg_body_2.png",
   },
 
   /**
