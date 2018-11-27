@@ -19,25 +19,8 @@ Component({
     onTapButton(e) {
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[10] = option;
-      this.MarkExam();
+      getApp().MarkExam();
       this.triggerEvent('switchPage', 1);
-    },
-    MarkExam() {
-      let {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter} = getApp().globalData;
-      userAnswer.forEach((item, index) => {
-        if (item == rightAnswers[index]) {
-          console.log('对了')
-        } else {
-          console.log('错误')
-          if (index > 0) {
-            userScore -= 10;
-          } else {
-            userScore -= 1;
-          }
-        }
-        console.log('userScore', userScore);
-      });
-      console.log('userAnswer', userAnswer);
     },
   }
 });
