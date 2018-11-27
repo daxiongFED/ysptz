@@ -9,15 +9,22 @@ Component({
    * 组件的初始数据
    */
   data: {
-    sex: null,
     msg_cover_bg: '/package-exam/res/msg_cover_bg.png',
+    
+    name: '',
+  },
+
+  attached() {
+    this.setData({name: getApp().globalData.name})
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    onTapButton() {
+    onTapButton(e) {
+      const option = +e.currentTarget.dataset.option;
+      getApp().globalData.userAnswer[4] = option;
       this.triggerEvent('onTapButton');
     },
   }

@@ -14,6 +14,12 @@ Component({
     article_2: "/package-exam/res/article_2.png",
 
     showMsgCover: false,
+
+    name: '',
+  },
+
+  attached() {
+    this.setData({name: getApp().globalData.name})
   },
 
   /**

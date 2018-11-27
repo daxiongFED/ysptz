@@ -10,8 +10,8 @@
       <view class="text">再听一次</view>
     </view>
     <view class="area__button--select">
-      <view class="g__button--select" bindtap="onTapButton">好的，明天一定准时到</view>
-      <view class="g__button--select" bindtap="onTapButton">要核实一下是哪位找我</view>
+      <view class="g__button--select" bindtap="onTapButton" data-option='0'>好的，明天一定准时到</view>
+      <view class="g__button--select" bindtap="onTapButton" data-option='1'>要核实一下是哪位找我</view>
     </view>
   </view>
 </view>

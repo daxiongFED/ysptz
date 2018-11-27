@@ -9,7 +9,12 @@ Component({
    * 组件的初始数据
    */
   data: {
-    background_1: "/images/background_1.png"
+    background_1: "/images/background_1.png",
+    name: '',
+  },
+
+  attached() {
+    this.setData({name: getApp().globalData.name})
   },
 
   /**
@@ -17,7 +22,7 @@ Component({
    */
   methods: {
     onTapPage() {
-      this.triggerEvent('switchPage', 13);
+      this.triggerEvent('switchPage', 12);
     },
   }
 });

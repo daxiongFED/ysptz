@@ -5,15 +5,15 @@
   </view>
   <view class="wrapper__content">
     <view class="block--1">
-      <view class="block--1__name">王大路</view>
+      <view class="block--1__name">{{name}}</view>
       <view class="block--1__text">看到这条短信，你会作何选择</view>
     </view>
     <view class="block--3">
       <view class="area__button--select">
-        <view class="g__button--select" bindtap="onTapButton">先试着干一票，如果赚钱了拉亲朋好友一起做，毕竟赚钱的机会不能错过</view>
-        <view class="g__button--select" bindtap="onTapButton">偷偷自己做，不要告诉别人这种天上掉馅饼的好事，我太机智了</view>
-        <view class="g__button--select" bindtap="onTapButton">我外甥女刚好没上班，我工作这么忙就算了，推荐给她吧</view>
-        <view class="g__button--select" bindtap="onTapButton">不理睬，删掉信息</view>
+        <view class="g__button--select" bindtap="onTapButton" data-option='0'>先试着干一票，如果赚钱了拉亲朋好友一起做，毕竟赚钱的机会不能错过</view>
+        <view class="g__button--select" bindtap="onTapButton" data-option='1'>偷偷自己做，不要告诉别人这种天上掉馅饼的好事，我太机智了</view>
+        <view class="g__button--select" bindtap="onTapButton" data-option='2'>我外甥女刚好没上班，我工作这么忙就算了，推荐给她吧</view>
+        <view class="g__button--select" bindtap="onTapButton" data-option='3'>不理睬，删掉信息</view>
       </view>
     </view>
   </view>

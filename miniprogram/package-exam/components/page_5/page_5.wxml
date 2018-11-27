@@ -5,7 +5,7 @@
   </view>
   <view class="wrapper__content">
     <view class="block--1">
-      <view class="block--1__name">王大路</view>
+      <view class="block--1__name">{{name}}</view>
       <view class="block--1__text">周二，你接到一个陌生电话</view>
     </view>
     <view class="block--2">
@@ -20,9 +20,9 @@
     </view>
     <view class="block--3">
       <view class="area__button--select">
-        <view class="g__button--select" bindtap="onTapButton">宝贝孩子生命要进，立即按李老师要求将钱汇到银行卡中</view>
-        <view class="g__button--select" bindtap="onTapButton">回拨对方提供的班主任李老师的电话，向李老师核实一下孩子的情况</view>
-        <view class="g__button--select" bindtap="onTapButton">先赶往学校，了解事情的起因后再决定</view>
+        <view class="g__button--select" bindtap="onTapButton" data-option='0'>宝贝孩子生命要进，立即按李老师要求将钱汇到银行卡中</view>
+        <view class="g__button--select" bindtap="onTapButton" data-option='1'>回拨对方提供的班主任李老师的电话，向李老师核实一下孩子的情况</view>
+        <view class="g__button--select" bindtap="onTapButton" data-option='2'>先赶往学校，了解事情的起因后再决定</view>
       </view>
     </view>
   </view>

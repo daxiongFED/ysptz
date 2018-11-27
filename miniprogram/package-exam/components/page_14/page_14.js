@@ -16,8 +16,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onTapButton() {
+    onTapButton(e) {
+      const option = +e.currentTarget.dataset.option;
+      getApp().globalData.userAnswer[10] = option;
+      this.MarkExam();
       this.triggerEvent('switchPage', 1);
+    },
+    MarkExam() {
+      const userAnswer = getApp().globalData.userAnswer;
+      console.log('userAnswer', userAnswer);
     },
   }
 });

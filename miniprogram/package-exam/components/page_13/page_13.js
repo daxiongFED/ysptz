@@ -10,13 +10,16 @@ Component({
    */
   data: {
     background_1: "/images/background_1.png",
+    picture_1: "/package-exam/pages/res/picture_1.png",
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    onTapButton() {
+    onTapButton(e) {
+      const option = +e.currentTarget.dataset.option;
+      getApp().globalData.userAnswer[9] = option;
       this.triggerEvent('switchPage', 14);
     },
   }

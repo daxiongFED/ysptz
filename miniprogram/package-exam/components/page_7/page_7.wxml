@@ -5,7 +5,7 @@
   </view>
   <view class="wrapper__content">
     <view class="block--1">
-      <view class="block--1__name">王大路</view>
+      <view class="block--1__name">{{name}}</view>
       <view class="block--1__text">周四，你接到一个自称通讯局的电话</view>
     </view>
     <view class="block--2">

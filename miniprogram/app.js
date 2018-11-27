@@ -1,7 +1,30 @@
 //app.js
 App({
   onLaunch: function () {
-    this.globalData = {}
+    this.globalData = {
+      name: '', // 用户输入的名字
+      sex: '', // 用户选择的性别
+      questionCount: 11, // 题目总数
+      rightAnswers: [1, 1, 2, 0, 3, 2, 0, 2, 0, 0, 4], // 正确答案数组 第一项为0，第二项为1，如此类推
+      characterMap: ['隐藏的0', '慎密的1', '天真的2', '理性的3', '智慧的4', '慧眼的5', '戏多的6'], // 性格字典
+      optionsWithCharacter: [ // 选项对应的性格
+        [0, 1],
+        [2, 1],
+        [2, 3, 1],
+        [2, 4, 1, 3],
+        [4, 3, 1, 3],
+        [2, 2, 5, 5, 6],
+        [4, 3, 6, 1, 5],
+        [2, 3, 5, 6],
+        [1, 6, 3],
+        [4, 1, 2, 1],
+        [5, 2, 6, 3, 4],
+      ],
+      totalScore: 101, // 总分
+
+      userAnswer: [], // 用户答案
+      userScore: 101, // 用户得分
+    };
     const me = this;
     const name = 'iPhone X';
     

@@ -33,5 +33,4 @@
   flex-direction: column;
 }
 .g__button--select {
-  margin: 20rpx 0;
 }

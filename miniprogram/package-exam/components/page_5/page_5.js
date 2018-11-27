@@ -10,13 +10,21 @@ Component({
    */
   data: {
     background_1: "/images/background_1.png",
+
+    name: '',
+  },
+
+  attached() {
+    this.setData({name: getApp().globalData.name})
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    onTapButton() {
+    onTapButton(e) {
+      const option = +e.currentTarget.dataset.option;
+      getApp().globalData.userAnswer[2] = option;
       this.triggerEvent('switchPage', 6);
     },
   }

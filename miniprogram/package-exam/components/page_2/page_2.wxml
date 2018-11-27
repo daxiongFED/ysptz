@@ -8,11 +8,11 @@
     <text class="text--2">广东省 珠海市</text>
     <view class="text--3">未知号码</view>
     <view class="buttons">
-      <view class="button">
+      <view class="button" bindtap="onTapButton" data-option='0'>
         <image mode="aspectFill" src="{{phone_reject}}"></image>
         <view class="label">拒绝</view>
       </view>
-      <view class="button" bindtap="onTapPage">
+      <view class="button" bindtap="onTapButton" data-option='1'>
         <image mode="aspectFill" src="{{phone_accept}}"></image>
         <view class="label">接受</view>
       </view>

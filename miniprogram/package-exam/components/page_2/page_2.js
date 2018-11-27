@@ -18,8 +18,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onTapPage() {
-      this.triggerEvent('switchPage', 3);
+    onTapButton(e) {
+      const option = +e.currentTarget.dataset.option;
+      getApp().globalData.userAnswer[0] = option;
+      option == 1 && this.triggerEvent('switchPage', 3);
     },
   }
 });

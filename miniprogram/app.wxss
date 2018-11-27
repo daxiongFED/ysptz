@@ -8,16 +8,17 @@
 .g__button--select {
   background: linear-gradient(to right, #D5DC21, #F8EA21 , #F7AC3B);
   width: 560rpx;
-  height: 72rpx;
-  border-radius: 36rpx;
+  height: 90rpx;
+  border-radius: 22rpx;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   color: #333;
   font-weight: 600;
   font-size: 35rpx;
   padding:0 30rpx;
   line-height:54rpx;
+  margin: 15rpx 0;
 }
 .g__button--select:active {
   color: #fff;
