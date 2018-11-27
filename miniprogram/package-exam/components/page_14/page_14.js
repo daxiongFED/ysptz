@@ -23,13 +23,19 @@ Component({
       this.triggerEvent('switchPage', 1);
     },
     MarkExam() {
-      const {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter} = getApp().globalData.userAnswer;
+      let {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter} = getApp().globalData;
       userAnswer.forEach((item, index) => {
         if (item == rightAnswers[index]) {
-          
+          console.log('对了')
         } else {
-
+          console.log('错误')
+          if (index > 0) {
+            userScore -= 10;
+          } else {
+            userScore -= 1;
+          }
         }
+        console.log('userScore', userScore);
       });
       console.log('userAnswer', userAnswer);
     },
