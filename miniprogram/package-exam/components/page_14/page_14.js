@@ -23,7 +23,14 @@ Component({
       this.triggerEvent('switchPage', 1);
     },
     MarkExam() {
-      const userAnswer = getApp().globalData.userAnswer;
+      const {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter} = getApp().globalData.userAnswer;
+      userAnswer.forEach((item, index) => {
+        if (item == rightAnswers[index]) {
+          
+        } else {
+
+        }
+      });
       console.log('userAnswer', userAnswer);
     },
   }
