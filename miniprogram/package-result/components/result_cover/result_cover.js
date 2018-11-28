@@ -55,5 +55,44 @@ Component({
       const ctx = wx.createCanvasContext('myCanvas', this);
       canvasPainter.preparePaint(ctx, this);
     },
+    _canvasToTempFilePath(callback) {
+      const screenWidth = getApp().globalData.screenWidth;
+      const { width, height, quality } = this.data;    
+      const rpx = screenWidth / 750 * quality;
+      let canvasWidth = width * rpx;
+      let canvasHeight = height * rpx;
+      console.log('_canvasToTempFilePath', canvasWidth, canvasHeight);
+      wx.canvasToTempFilePath({
+        x: 0,
+        y: 0,
+        width: canvasWidth,
+        height: canvasHeight,
+        destWidth: canvasWidth * 2,
+        destHeight: canvasHeight * 2,
+        canvasId: 'myCanvas',
+        success: res => {
+          callback && callback(res.tempFilePath);
+        },
+        fail: err => {
+          console.log('canvasToTempFilePath failed', err);
+        }
+      }, this);
+    },
+    _saveImageToPhotosAlbum() {
+      return new Promise((resolve,reject) => {
+        this._canvasToTempFilePath((path) => {
+          wx.saveImageToPhotosAlbum({
+            filePath: path,
+            success: res => {
+                console.log('saveImageToPhotosAlbum success')
+                resolve(res)
+            },
+            fail: err => {
+                reject(err)
+            }
+          })
+        });
+      });
+    },
   }
 });

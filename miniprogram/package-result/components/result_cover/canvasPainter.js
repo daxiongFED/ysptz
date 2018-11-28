@@ -22,8 +22,16 @@ function preparePaint(ctx, that) {
     // }
     // that.triggerEvent('notifyScreenshotReady', that.data.autoSave+1);
     // that.dispathFinishPaintEvent()
-  })
+    return that._saveImageToPhotosAlbum();
+  }).then(res => {
+    wx.showToast({
+      title: '体验报告已存至你的相册，快转发至朋友圈吧~',
+      mask: true,
+      icon: 'none',
+    });
+  });
 }
+
 
 let rpx;
 function _startPaint(ctx, that) {
