@@ -5,9 +5,13 @@
   </view>
   <view class="wrapper__content">
     <view class="text--1">音频波动条</view>
-    <view class="text--2">
-      <view class="icon--retry"></view>
-      <view class="text">再听一次</view>
+    <view class="text--2" bindtap="onTapAgain">
+      <view class="icon--again">
+          <image src="{{again}}"></image>
+      </view>
+      <view class="text">
+        再听一次
+      </view>
     </view>
     <view class="area__button--select">
       <view class="g__button--select" bindtap="onTapButton" data-option='0'>好的，明天一定准时到</view>

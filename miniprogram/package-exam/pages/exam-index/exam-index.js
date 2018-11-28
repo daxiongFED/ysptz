@@ -1,11 +1,12 @@
 // pages/chooseLib/chooseLib.js
+import { invoke, invokeComponent, addComponentPage } from "../../../utils/page";
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    wantPageIndex: 1,
+    wantPageIndex: 4,
   },
 
   /**
@@ -26,7 +27,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    if (this.data.wantPageIndex == 2) {
+      invokeComponent("package-exam/components/page_2/page_2", "_playBell");
+    }
   },
 
   /**

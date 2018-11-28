@@ -2,8 +2,8 @@
 App({
   onLaunch() {
     this.globalData = {
-      name: '', // 用户输入的名字
-      sex: '', // 用户选择的性别
+      userName: '无名哥', // 用户输入的名字
+      userSex: '', // 用户选择的性别
       questionCount: 11, // 题目总数
       rightAnswers: [1, 1, 2, 0, 3, 2, 0, 2, 0, 0, 4], // 正确答案数组 第一项为0，第二项为1，如此类推
       characterMap: {

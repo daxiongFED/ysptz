@@ -15,7 +15,7 @@ Component({
   },
 
   attached() {
-    this.setData({name: getApp().globalData.name})
+    this.setData({name: getApp().globalData.userName})
   },
 
   /**

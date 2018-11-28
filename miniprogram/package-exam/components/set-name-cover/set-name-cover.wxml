@@ -4,7 +4,7 @@
     <form bindsubmit="onTapSubmit" report-submit="true">
       <view class="content__center">
         <view class="center__input--name">
-          <input class='input' type="text" name="name" placeholder="输入你的虚拟名字" placeholder-class='placeholder_class' maxlength="5"></input>
+          <input class='input' type="text" name="name" placeholder="输入你的虚拟名字" placeholder-class='placeholder_class' maxlength="10"></input>
         </view>
         <view class="center__select--sex">
           <view class="select__button select__button--female {{sex == 'female' ? 'selected' : ''}}" bindtap="onTapSelect" data-sex="female">女</view>

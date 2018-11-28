@@ -24,6 +24,19 @@
   font-size: 76rpx;
   margin-top: 12vh;
 }
+.text--2 {
+  margin-top: 250rpx;
+  font-size: 30rpx;
+  display: flex;
+}
+.text--2 .icon--again {
+  margin-top: 5rpx;
+  margin-right: 10rpx;
+}
+.text--2 .icon--again image {
+  width: 30rpx;
+  height: 30rpx;
+}
 .wrapper__content .area__button--select{
   position: absolute;
   bottom: 100rpx;

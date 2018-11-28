@@ -15,9 +15,9 @@ Component({
     quality: 1,
     background: "/package-result/res/result_page_600.png",
     
-    userName: '曾志雄',
+    userName: '',
 
-    userTitle: "/package-result/res/title_1.png",
+    userTitle: '/package-result/res/title_1.png',
     userTitleDesc: '你就是江湖上的传说，俗称祖师爷，不出去害人就很好了。记得多多传授反诈骗知识给身边的朋友。',
 
     userRank: '15%的小众群体',
