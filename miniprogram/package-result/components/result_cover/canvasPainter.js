@@ -107,6 +107,15 @@ function _startPaint(ctx, that) {
       bold: true,
     });
 
+    // 形容词描述 人群描述
+    fillText(ctx, {
+      text: userAdjDesc+'|'+userPositionDesc,
+      fontsize: 32,
+      x: 80,
+      y: 900,
+      color: '#000',
+    }, 580);
+
     ctx.draw(false, res => { resolve(res) });
   })
 }
@@ -126,7 +135,10 @@ function fillText(ctx, textObj, width) {
     const newTextArray = [];
     let rowFirstIndex = 0;
     for(let i = 0; i < text.length; i++) {
-      if (ctx.measureText(text.substring(rowFirstIndex, i)).width > width * rpx) {
+      if (text[i] == '|') {
+        newTextArray.push(text.substring(rowFirstIndex, i));
+        rowFirstIndex = i+1;
+      } else if (ctx.measureText(text.substring(rowFirstIndex, i)).width > width * rpx) {
         newTextArray.push(text.substring(rowFirstIndex, i-1));
         console.log(text.substring(rowFirstIndex, i), ctx.measureText(text.substring(rowFirstIndex, i)).width);
         rowFirstIndex = i-1;
