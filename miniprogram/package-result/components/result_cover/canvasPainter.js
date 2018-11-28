@@ -60,11 +60,11 @@ function _startPaint(ctx, that) {
     // 称号描述
     fillText(ctx, {
       text: userTitleDesc,
-      fontsize: 32,
+      fontsize: 29,
       x: 80,
       y: 410,
       color: '#000',
-      // bold: true,
+      bold: true,
     }, 580);
     // }, 370);
 
@@ -110,10 +110,11 @@ function _startPaint(ctx, that) {
     // 形容词描述 人群描述
     fillText(ctx, {
       text: userAdjDesc+'|'+userPositionDesc,
-      fontsize: 32,
+      fontsize: 29,
       x: 80,
       y: 900,
       color: '#000',
+      bold: true,
     }, 580);
 
     ctx.draw(false, res => { resolve(res) });
@@ -126,37 +127,30 @@ function fillText(ctx, textObj, width) {
   let { text, fontsize, color, x, y, bold } = textObj;
   ctx.font = `normal${bold ? ' bold':''} ${fontsize * rpx}px sans-serif`;
   console.log('ctx.font', ctx.font);
-  // ctx.setFontSize(fontsize * rpx)
+  ctx.setFontSize(fontsize * rpx);
   ctx.setFillStyle(color)
   // 有宽度代表要换行展示
   console.log('width * rpx', width * rpx);
   console.log('screenWidth', getApp().globalData.screenWidth);
-  if (width && ctx.measureText(text).width > width * rpx) {
-    const newTextArray = [];
-    let rowFirstIndex = 0;
-    for(let i = 0; i < text.length; i++) {
-      if (text[i] == '|') {
-        newTextArray.push(text.substring(rowFirstIndex, i));
-        rowFirstIndex = i+1;
-      } else if (ctx.measureText(text.substring(rowFirstIndex, i)).width > width * rpx) {
-        newTextArray.push(text.substring(rowFirstIndex, i-1));
-        console.log(text.substring(rowFirstIndex, i), ctx.measureText(text.substring(rowFirstIndex, i)).width);
-        rowFirstIndex = i-1;
-      }
-      if (i == text.length - 1) {
-        newTextArray.push(text.substring(rowFirstIndex, i + 1));
-        console.log(text.substring(rowFirstIndex, i + 1), ctx.measureText(text.substring(rowFirstIndex, i + 1)).width);
-      }
+  const newTextArray = [];
+  let rowFirstIndex = 0;
+  for(let i = 0; i < text.length; i++) {
+    if (text[i] == '|') {
+      newTextArray.push(text.substring(rowFirstIndex, i));
+      rowFirstIndex = i+1;
+    } else if (width && ctx.measureText(text.substring(rowFirstIndex, i)).width > width * rpx) {
+      newTextArray.push(text.substring(rowFirstIndex, i-1));
+      console.log(text.substring(rowFirstIndex, i), ctx.measureText(text.substring(rowFirstIndex, i)).width);
+      rowFirstIndex = i-1;
     }
-    newTextArray.forEach((item, index) => {
-      ctx.fillText(item, x * rpx, (y + (fontsize + 10) * index) * rpx);
-      if (index = 1) {
-        ctx.font = 'blod Arial';
-      }
-    });
-  } else {
-    ctx.fillText(text, x * rpx, y * rpx);
+    if (i == text.length - 1) {
+      newTextArray.push(text.substring(rowFirstIndex, i + 1));
+      console.log(text.substring(rowFirstIndex, i + 1), ctx.measureText(text.substring(rowFirstIndex, i + 1)).width);
+    }
   }
+  newTextArray.forEach((item, index) => {
+    ctx.fillText(item, x * rpx, (y + (fontsize + 10) * index) * rpx);
+  });
 }
 function roundRect(ctx, x, y, w, h, r) {
   if (w < 2 * r) r = w / 2;

@@ -29,6 +29,7 @@ Component({
   },
 
   attached() {
+    this._initUserInfo();
     this._painter();
   },
 
@@ -36,6 +37,20 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    _initUserInfo() {
+      getApp().MarkExam();
+      const {userName, userScoreInfo, userCharacterInfo} = getApp().globalData;
+      this.setData({
+        userName: userName,
+        userTitle: `/package-result/res/title_${userScoreInfo.titleIndex}.png`,
+        userTitleDesc: userScoreInfo.titleDesc,
+        userRank: userScoreInfo.ranking,
+        userAdj: userCharacterInfo.adj,
+        userAdjDesc: userCharacterInfo.adjDesc,
+        userPosition: userScoreInfo.position,
+        userPositionDesc: userScoreInfo.positionDesc,
+      });
+    },
     _painter() {
       const ctx = wx.createCanvasContext('myCanvas', this);
       canvasPainter.preparePaint(ctx, this);

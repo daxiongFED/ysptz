@@ -9,7 +9,7 @@ App({
       characterMap: {
         0: {
           adj: '隐藏的',
-          adjDesc: '无',
+          adjDesc: '',
         },
         1: {
           adj: '慎密的',
@@ -51,6 +51,7 @@ App({
       ],
       scoreMap: {
         100: {
+          titleIndex: 2,
           title: '一枝独秀',
           titleDesc: '你连电话都懒得接听，往好的方面讲，骗子也确实不好骗一个不听他电话的人。',
           position: '佛系人群',
@@ -58,6 +59,7 @@ App({
           ranking: '1%的罕见人物'
         },
         101: {
+          titleIndex: 1,
           title: '祖师爷级',
           titleDesc: '你就是江湖上的传说，俗称祖师爷，不出去害人就很好了。记得多多传授反诈骗知识给身边的朋友。',
           position: '殿堂人物',
@@ -65,6 +67,7 @@ App({
           ranking: '3%的罕见人物'
         },
         91:  {
+          titleIndex: 3,
           title: '望尘莫及',
           titleDesc: '拥有超强防骗意识、身怀绝技、处变不惊的反诈老司机。',
           position: '膜拜对象',
@@ -72,6 +75,7 @@ App({
           ranking: '5%的稀有群体'
         },
         81:  {
+          titleIndex: 4,
           title: '百骗不侵',
           titleDesc: '你天生拥有火眼金睛，总能一眼识破骗局，至今维持被骗O记录。',
           position: '反诈大佬',
@@ -79,6 +83,7 @@ App({
           ranking: '15%的小众群体'
         },
         71:  {
+          titleIndex: 5,
           title: '骨骼惊奇',
           titleDesc: '你具备一定的反诈骗知识和防范能力，从不相信天上掉馅饼，骗子对你总是无从下手。',
           position: '反诈少侠',
@@ -86,6 +91,7 @@ App({
           ranking: '25%的大众群体'
         },
         61:  {
+          titleIndex: 6,
           title: '合格品种',
           titleDesc: '你的求生欲很强，遇到险情总能及时止损，但行骗新套路不断，要及时更新防骗知识库存哟。',
           position: '反诈先锋',
@@ -93,6 +99,7 @@ App({
           ranking: '30%的大众群体'
         },
         51:  {
+          titleIndex: 7,
           title: '勉强及格',
           titleDesc: '你的思路清晰，但遇到腹黑行骗高手偶尔也会当机。',
           position: '反诈新手',
@@ -100,6 +107,7 @@ App({
           ranking: '30%的大众群体'
         },
         41:  {
+          titleIndex: 8,
           title: '弱小的我',
           titleDesc: '你是骗子们最喜欢PICK的反射弧超长的呆萌宝宝，快去恶补反诈骗知识吧！',
           position: '保护对象',
@@ -107,6 +115,7 @@ App({
           ranking: '15%的小众群体'
         },
         31:  {
+          titleIndex: 9,
           title: '瑟瑟发抖',
           titleDesc: '你对骗子深恶痛绝，但对此又力不从心，日常被骗只能半夜嘤嘤嘤，哭泣到天明。',
           position: '待割韭菜',
@@ -114,6 +123,7 @@ App({
           ranking: '8%的稀有群体'
         },
         21:  {
+          titleIndex: 10,
           title: '望勿弃疗',
           titleDesc: '吃一堑长一智，纵使日常被骗，千疮百孔也要勇往直前，提高防范鸭~',
           position: '待割韭菜',
@@ -121,6 +131,7 @@ App({
           ranking: '3%的罕见人物'
         },
         11:  {
+          titleIndex: 11,
           title: '身残志坚',
           titleDesc: '这位兄dei，还记得那些年上过的天台吗？悬梁苦读反诈知识才是渡劫之道啊！',
           position: '待割韭菜',
@@ -128,6 +139,7 @@ App({
           ranking: '1%的罕见人物'
         },
         1:   {
+          titleIndex: 11,
           title: '身残志坚',
           titleDesc: '这位兄dei，还记得那些年上过的天台吗？悬梁苦读反诈知识才是渡劫之道啊！',
           position: '待割韭菜',
@@ -139,6 +151,8 @@ App({
 
       userAnswer: [], // 用户答案
       userScore: 101, // 用户得分
+      userScoreInfo: {}, // 用户得分对应的信息
+      userCharacterInfo: {}, // 用户得分对应的信息
     };
     const me = this;
     const name = 'iPhone X';
@@ -168,7 +182,7 @@ App({
   MarkExam() {
     const userCharacterList = [];
     let {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter, scoreMap} = this.globalData;
-    // userAnswer = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    userAnswer = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
     userAnswer.forEach((item, index) => {
       if (item == rightAnswers[index]) {
       } else {
@@ -186,6 +200,12 @@ App({
     console.log('userScore', scoreMap[userScore]);
     console.log('userCharacterList', userCharacterList);
     console.log('userCharacter', userCharacter);
+    this.globalData['userScoreInfo'] = scoreMap[userScore];
+    this.globalData['userCharacterInfo'] = userCharacter;
+
+    // mock
+    // this.globalData['userScoreInfo'] = scoreMap[11];
+    // this.globalData['userCharacterInfo'] = this.globalData.characterMap[6];
   },
   _getCharacterByList(userCharacterList) {
     let _returnCharacterIndex;

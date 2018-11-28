@@ -21,7 +21,14 @@ Component({
     onTapButton(e) {
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[0] = option;
-      option == 1 && this.triggerEvent('switchPage', 3);
+      if (options == 1) {
+        this.triggerEvent('switchPage', 3);
+      } else if (options == 0) {
+        wx.navigateTo({
+          // url: '/package-exam/pages/exam-index/exam-index',
+          url: '/package-result/pages/result-index/result-index',
+        })
+      }
     },
   }
 });

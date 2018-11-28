@@ -19,8 +19,11 @@ Component({
     onTapButton(e) {
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[10] = option;
-      getApp().MarkExam();
-      this.triggerEvent('switchPage', 1);
+      // this.triggerEvent('switchPage', 1);
+      wx.navigateTo({
+        // url: '/package-exam/pages/exam-index/exam-index',
+        url: '/package-result/pages/result-index/result-index',
+      })
     },
   }
 });

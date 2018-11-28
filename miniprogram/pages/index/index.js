@@ -6,7 +6,8 @@ Page({
   },
   onLoad: function() {
       wx.redirectTo({
-        url: '/package-result/pages/result-index/result-index',
+        url: '/package-exam/pages/exam-index/exam-index',
+        // url: '/package-result/pages/result-index/result-index',
       })
   },
 })
