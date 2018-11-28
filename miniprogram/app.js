@@ -182,7 +182,7 @@ App({
   MarkExam() {
     const userCharacterList = [];
     let {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter, scoreMap} = this.globalData;
-    userAnswer = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    // userAnswer = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
     userAnswer.forEach((item, index) => {
       if (item == rightAnswers[index]) {
       } else {
