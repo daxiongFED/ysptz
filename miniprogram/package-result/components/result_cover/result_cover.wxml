@@ -1,0 +1,12 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page" wx:if="{{false}}">
+  <view class="wrapper--content">
+    <view class="wrapper--bg">
+      <image class="c-img-bg" src="{{background}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+<canvas  
+    canvas-id="myCanvas" 
+    style='width:{{width*quality}}rpx;height:{{height*quality}}rpx;position:fixed;top:0px;left:0px'>
+</canvas>

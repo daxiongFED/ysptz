@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    wantPageIndex: 1,
   },
 
   /**
@@ -62,10 +61,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  
-  // 切换模块
-  switchPage(e) {
-    this.setData({wantPageIndex: e.detail});
   },
 })

@@ -13,6 +13,11 @@
         "pages/deployFunctions/deployFunctions",
         "pages/exam-index/exam-index"
       ]
+    }, {
+      "root": "package-result",
+      "pages": [
+        "pages/result-index/result-index"
+      ]
     }
   ],
   "window": {

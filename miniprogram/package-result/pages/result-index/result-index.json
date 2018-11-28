@@ -1,22 +1,6 @@
 {
   "usingComponents": {
     "page-title": "/components/page-title/page-title",
-    "page_1": "../../components/page_1/page_1",
-    "page_2": "../../components/page_2/page_2",
-    "page_3": "../../components/page_3/page_3",
-    "page_4": "../../components/page_4/page_4",
-    "page_5": "../../components/page_5/page_5",
-    "page_6": "../../components/page_6/page_6",
-    "page_7": "../../components/page_7/page_7",
-    "page_8": "../../components/page_8/page_8",
-    "page_9": "../../components/page_9/page_9",
-    "page_10": "../../components/page_10/page_10",
-    "page_11": "../../components/page_11/page_11",
-    "page_12": "../../components/page_12/page_12",
-    "page_13": "../../components/page_13/page_13",
-    "page_14": "../../components/page_14/page_14",
-    "received-a-call": "../../components/received-a-call/received-a-call",
-    "set-name": "../../components/set-name/set-name",
-    "fade-in-page": "../../components/fade-in-page/fade-in-page"
+    "result_cover": "../../components/result_cover/result_cover"
   }
 }
