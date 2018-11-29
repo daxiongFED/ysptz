@@ -75,5 +75,5 @@
 }
 .g__button--select {
   height: 120rpx;
-  font-size: 33rpx;
+  font-size: 32rpx;
 }

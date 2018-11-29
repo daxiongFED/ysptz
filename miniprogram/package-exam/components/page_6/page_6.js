@@ -17,7 +17,7 @@ Component({
     msg_body_1: "/package-exam/res/msg_body_1.png",
     msg_body_2: "/package-exam/res/msg_body_2.png",
 
-    screenHeight: getApp().globalData["screenHeight"],
+    windowHeight: getApp().globalData["windowHeight"],
   },
 
   /**

@@ -15,7 +15,7 @@ Component({
     article_1: "/package-exam/res/article_1.png",
     article_2: "/package-exam/res/article_2.png",
 
-    screenHeight: getApp().globalData["screenHeight"],
+    windowHeight: getApp().globalData["windowHeight"],
 
     name: '',
   },

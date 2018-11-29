@@ -13,7 +13,7 @@
   </view>
   <view class="page--ready" bindlongpress="onLongPress">
     <view class="wrapper--bg">
-      <image class="c-img-bg" src="{{canvasImage}}" mode="scaleToFill"></image>
+      <image class="c-img-bg" src="{{canvasImage}}" mode="aspectFit"></image>
     </view>
     <view class="wrapper__content">
       <view class="block__handle--watchMovie" bindtap="onTapWatchMovie"></view>

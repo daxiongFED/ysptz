@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30rpx;
+  font-size: 40rpx;
   color: #333;
+  overflow: hidden;
 }

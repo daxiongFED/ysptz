@@ -16,7 +16,7 @@ const animation = {
       delay: 0,
       transformOrigin: "ease-out"
     });
-    Animation.top(getApp().globalData["screenHeight"])
+    Animation.top(getApp().globalData["windowHeight"])
       .opacity(0.9)
       .step();
     return Animation.export();
@@ -39,7 +39,7 @@ const animation = {
       delay: 0,
       transformOrigin: "ease-out"
     });
-    Animation.opacity(0).step().top(100000).step();
+    Animation.opacity(0).step().top(getApp().globalData["windowHeight"]).step();
     // Animation.top(1000).step();
     return Animation.export();
   },

@@ -15,7 +15,7 @@
       <view class="block--2_tips">轻触继续</view>
     </view>
   </view>
-  <view class="wrapper--cover" animation="{{animation}}" style="top:{{screenHeight}}rpx;">
+  <view class="wrapper--cover" animation="{{animation}}" style="top:{{windowHeight}}px;">
     <msg-cover_2 bind:onTapButton="onTapButton"></msg-cover_2>
   </view>
 </view>

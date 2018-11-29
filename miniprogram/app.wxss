@@ -1,4 +1,8 @@
 /**app.wxss**/
+page {
+  /* height: 100vh;
+  overflow: hidden; */
+}
 .container {
   display: flex;
   flex-direction: column;

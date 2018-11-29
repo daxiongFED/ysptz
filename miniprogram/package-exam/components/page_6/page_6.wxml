@@ -23,7 +23,7 @@
       <image src="{{msg_footer}}" mode="widthFix"></image>
     </view>
   </view>
-  <view class="wrapper--cover" animation="{{animation}}" style="top:{{screenHeight}}rpx;">
+  <view class="wrapper--cover" animation="{{animation}}" style="top:{{windowHeight}}px;">
     <msg-cover_1 bind:onTapButton="onTapButton"></msg-cover_1>
   </view>
 </view>
