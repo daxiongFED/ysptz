@@ -2,8 +2,6 @@
 App({
   onLaunch() {
     this.globalData = {
-      userName: '无名哥', // 用户输入的名字
-      userSex: '', // 用户选择的性别
       questionCount: 11, // 题目总数
       rightAnswers: [1, 1, 2, 0, 3, 2, 0, 2, 0, 0, 4], // 正确答案数组 第一项为0，第二项为1，如此类推
       characterMap: {
@@ -149,6 +147,8 @@ App({
       },
       totalScore: 101, // 总分
 
+      userName: '无名哥', // 用户输入的名字
+      userSex: '', // 用户选择的性别
       userAnswer: [], // 用户答案
       userScore: 101, // 用户得分
       userScoreInfo: {}, // 用户得分对应的信息
@@ -178,6 +178,14 @@ App({
         me.globalData["screenHeight"] = res.screenHeight
       },
     })
+  },
+  clearUserData() {
+    this.globalData.userName = '无名哥';
+    this.globalData.userSex = '';
+    this.globalData.userAnswer = [];
+    this.globalData.userScore = 101;
+    this.globalData.userScoreInfo = {};
+    this.globalData.userCharacterInfo = {};
   },
   MarkExam() {
     const userCharacterList = [];

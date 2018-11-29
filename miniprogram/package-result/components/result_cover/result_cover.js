@@ -95,9 +95,10 @@ Component({
               });
             });
           } else if (res.tapIndex == 1) {
+            getApp().clearUserData();
             wx.redirectTo({
               url: '/package-exam/pages/exam-index/exam-index?page=1',
-            })
+            });
           }
         },
       });
