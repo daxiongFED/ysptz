@@ -72,3 +72,10 @@
 .footer image {
   width: 100%;
 }
+.wrapper--cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}

@@ -23,7 +23,7 @@
       <image src="{{msg_footer}}" mode="widthFix"></image>
     </view>
   </view>
-  <view hidden="{{!showMsgCover}}">
+  <view class="wrapper--cover" animation="{{animation}}" style="top:{{screenHeight}}rpx;">
     <msg-cover_1 bind:onTapButton="onTapButton"></msg-cover_1>
   </view>
 </view>

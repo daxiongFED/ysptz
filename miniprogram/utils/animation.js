@@ -6,9 +6,7 @@ const animation = {
       delay: 0,
       transformOrigin: "ease-out"
     });
-    Animation.top(-getApp().globalData["screenHeight"])
-      .opacity(0.9)
-      .step();
+    Animation.top(0).step();
     return Animation.export();
   },
   slideDown(duration = 600) {

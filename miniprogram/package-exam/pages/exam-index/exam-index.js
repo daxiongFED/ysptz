@@ -15,9 +15,10 @@ Page({
    */
   onLoad: function (options) {
     if (options && options.page) {
-      this.setData({wantPageIndex: options.page});
+      this.switchPage(options.page);
     }
     this._style(1);
+    // this.switchPage({detail: 6}); // mock
   },
 
   /**

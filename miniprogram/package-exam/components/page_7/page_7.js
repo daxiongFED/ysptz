@@ -1,5 +1,6 @@
 // package-exam/components/received-a-call/received-a-call.js
 import { invoke, invokeComponent, addComponentPage } from "../../../utils/page";
+import animation from "../../../utils/animation";
 Component({
   /**
    * 组件的属性列表
@@ -14,7 +15,7 @@ Component({
     article_1: "/package-exam/res/article_1.png",
     article_2: "/package-exam/res/article_2.png",
 
-    showMsgCover: false,
+    screenHeight: getApp().globalData["screenHeight"],
 
     name: '',
   },
@@ -31,7 +32,7 @@ Component({
       this.setData({name: getApp().globalData.userName});
     },
     onTapPage() {
-      this.setData({showMsgCover: true});
+      this.setData({animation: animation.slideUp(300)});
     },
     onTapButton() {
       this.triggerEvent('switchPage', 8);
