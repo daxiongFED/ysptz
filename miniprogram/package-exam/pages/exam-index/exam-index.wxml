@@ -1,6 +1,6 @@
 <!-- pages/chooseLib/chooseLib.wxml -->
 <!-- 易受骗体质 -->
-<page-title title="">
+<page-title title="易受骗体质测试">
   <view class="page">
     <page_1 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 1}}"></page_1>
     <page_2 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 2}}"></page_2>
