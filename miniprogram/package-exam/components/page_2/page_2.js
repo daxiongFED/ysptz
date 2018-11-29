@@ -29,7 +29,7 @@ Component({
       this.Audio.src = '/package-exam/res/bell.mp3';
       setTimeout(() => {
         this.Audio.play();
-      }, 300);
+      }, 150);
     },
     onTapButton(e) {
       this.Audio.stop();

@@ -26,7 +26,7 @@ Component({
       this.Audio.src = '/package-exam/res/store.mp3';
       setTimeout(() => {
         this.Audio.play();
-      }, 300);
+      }, 150);
     },
     onTapAgain() {
       setTimeout(() => {
