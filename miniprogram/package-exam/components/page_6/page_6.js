@@ -1,4 +1,5 @@
 // package-exam/components/received-a-call/received-a-call.js
+import { invoke, invokeComponent, addComponentPage } from "../../../utils/page";
 Component({
   /**
    * 组件的属性列表

@@ -2,19 +2,67 @@
 <!-- 易受骗体质 -->
 <page-title title="易受骗体质测试">
   <view class="page">
-    <page_1 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 1}}"></page_1>
-    <page_2 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 2}}"></page_2>
-    <page_3 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 3}}"></page_3>
-    <page_4 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 4}}"></page_4>
-    <page_5 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 5}}"></page_5>
-    <page_6 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 6}}"></page_6>
-    <page_7 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 7}}"></page_7>
-    <page_8 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 8}}"></page_8>
-    <page_9 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 9}}"></page_9>
-    <page_10 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 10}}"></page_10>
-    <page_11 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 11}}"></page_11>
-    <page_12 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 12}}"></page_12>
-    <page_13 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 13}}"></page_13>
-    <page_14 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 14}}"></page_14>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_1}}" style="opacity: 1;{{pageStyle.style_1}}">
+      <page_1 bind:switchPage="switchPage"></page_1>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_2}}" style="opacity: 0;{{pageStyle.style_2}}">
+      <page_2 bind:switchPage="switchPage"></page_2>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_3}}" style="opacity: 0;{{pageStyle.style_3}}">
+      <page_3 bind:switchPage="switchPage"></page_3>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_4}}" style="opacity: 0;{{pageStyle.style_4}}">
+      <page_4 bind:switchPage="switchPage"></page_4>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_5}}" style="opacity: 0;{{pageStyle.style_5}}">
+      <page_5 bind:switchPage="switchPage"></page_5>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_6}}" style="opacity: 0;{{pageStyle.style_6}}">
+      <page_6 bind:switchPage="switchPage"></page_6>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_7}}" style="opacity: 0;{{pageStyle.style_7}}">
+      <page_7 bind:switchPage="switchPage"></page_7>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_8}}" style="opacity: 0;{{pageStyle.style_8}}">
+      <page_8 bind:switchPage="switchPage"></page_8>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_9}}" style="opacity: 0;{{pageStyle.style_9}}">
+      <page_9 bind:switchPage="switchPage"></page_9>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_10}}" style="opacity: 0;{{pageStyle.style_10}}">
+      <page_10 bind:switchPage="switchPage"></page_10>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_11}}" style="opacity: 0;{{pageStyle.style_11}}">
+      <page_11 bind:switchPage="switchPage"></page_11>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_12}}" style="opacity: 0;{{pageStyle.style_12}}">
+      <page_12 bind:switchPage="switchPage"></page_12>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_13}}" style="opacity: 0;{{pageStyle.style_13}}">
+      <page_13 bind:switchPage="switchPage"></page_13>
+    </view>
+    <view class="page__wrapper" animation="{{pageAnimation.animation_14}}" style="opacity: 0;{{pageStyle.style_14}}">
+      <page_14 bind:switchPage="switchPage"></page_14>
+    </view>
   </view>
 </page-title>
+<!--
+  <page-title title="易受骗体质测试">
+    <view class="page">
+      <page_1 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 1}}"></page_1>
+      <page_2 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 2}}"></page_2>
+      <page_3 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 3}}"></page_3>
+      <page_4 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 4}}"></page_4>
+      <page_5 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 5}}"></page_5>
+      <page_6 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 6}}"></page_6>
+      <page_7 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 7}}"></page_7>
+      <page_8 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 8}}"></page_8>
+      <page_9 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 9}}"></page_9>
+      <page_10 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 10}}"></page_10>
+      <page_11 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 11}}"></page_11>
+      <page_12 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 12}}"></page_12>
+      <page_13 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 13}}"></page_13>
+      <page_14 bind:switchPage="switchPage" wx:if="{{wantPageIndex == 14}}"></page_14>
+    </view>
+  </page-title>
+-->

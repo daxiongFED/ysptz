@@ -17,7 +17,7 @@ Component({
 
   attached() {
     addComponentPage(this);
-    this._playBell();
+    // this._playBell();
   },
 
   /**
@@ -29,7 +29,7 @@ Component({
       this.Audio.src = '/package-exam/res/bell.mp3';
       setTimeout(() => {
         this.Audio.play();
-      }, 500);
+      }, 300);
     },
     onTapButton(e) {
       this.Audio.stop();
@@ -38,7 +38,7 @@ Component({
       if (option == 1) {
         this.triggerEvent('switchPage', 3);
       } else if (option == 0) {
-        wx.navigateTo({
+        wx.redirectTo({
           // url: '/package-exam/pages/exam-index/exam-index',
           url: '/package-result/pages/result-index/result-index',
         })

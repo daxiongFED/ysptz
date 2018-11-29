@@ -1,4 +1,5 @@
 // package-exam/components/received-a-call/received-a-call.js
+import { invoke, invokeComponent, addComponentPage } from "../../../utils/page";
 Component({
   /**
    * 组件的属性列表
@@ -20,7 +21,8 @@ Component({
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[10] = option;
       // this.triggerEvent('switchPage', 1);
-      wx.navigateTo({
+      // wx.navigateTo({
+      wx.redirectTo({
         // url: '/package-exam/pages/exam-index/exam-index',
         url: '/package-result/pages/result-index/result-index',
       })

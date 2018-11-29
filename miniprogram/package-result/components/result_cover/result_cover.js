@@ -1,5 +1,6 @@
-// package-exam/components/received-a-call/received-a-call.js
+// package-result/components/result_cover/result_cover.js
 import canvasPainter from './canvasPainter.js'
+import animation from '../../../utils/animation.js';
 Component({
   /**
    * 组件的属性列表
@@ -55,7 +56,7 @@ Component({
               setTimeout(() => {
                 this.setData({ isPageReady: true });
                 this.setData({
-                  animation: this.anmt_slideDown()
+                  animation: animation.slideDown()
                 });
               }, 200);
             }
@@ -154,17 +155,6 @@ Component({
           }
         })
       });
-    },
-
-    anmt_slideDown() {
-      const Animation = wx.createAnimation({
-        duration: 600,
-        timingFunction: "linear",
-        delay: 0,
-        transformOrigin: "ease-out"
-      });
-      Animation.top(getApp().globalData["screenHeight"]).opacity(0.9).step();
-      return Animation.export();
     },
   }
 });
