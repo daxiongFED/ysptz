@@ -1,6 +1,6 @@
 <!-- pages/chooseLib/chooseLib.wxml -->
 <!-- 易受骗体质 -->
-<page-title title="">
+<page-title title="易受骗体质报告">
   <view class="page">
     <result_cover></result_cover>
   </view>

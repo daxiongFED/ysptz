@@ -22,14 +22,17 @@ function preparePaint(ctx, that) {
     // }
     // that.triggerEvent('notifyScreenshotReady', that.data.autoSave+1);
     // that.dispathFinishPaintEvent()
-    return that._saveImageToPhotosAlbum();
-  }).then(res => {
-    wx.showToast({
-      title: '体验报告已存至你的相册，快转发至朋友圈吧~',
-      mask: true,
-      icon: 'none',
+    return that._canvasToTempFilePath().then((path) => {
+      // return that._saveImageToPhotosAlbum(path);
     });
   });
+  // }).then(res => {
+  //   wx.showToast({
+  //     title: '体验报告已存至你的相册，快转发至朋友圈吧~',
+  //     mask: true,
+  //     icon: 'none',
+  //   });
+  // });
 }
 
 
@@ -63,7 +66,7 @@ function _startPaint(ctx, that) {
     })
     
     // 称号
-    ctx.drawImage(userTitle, 40, 100, 600*rpx, 138*rpx);
+    ctx.drawImage(userTitle, 80*rpx, 200*rpx, 600*rpx, 138*rpx);
 
     // 称号描述
     fillText(ctx, {

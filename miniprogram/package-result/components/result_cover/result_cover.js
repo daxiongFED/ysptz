@@ -10,10 +10,15 @@ Component({
    * 组件的初始数据
    */
   data: {
+    isPageReady: false,
+    isCanvasReady: false,
+    loadingNumber: 0,
+
     width: 750,
     height: 1206,
-    quality: 1,
+    quality: 2,
     background: "/package-result/res/result_page_600.png",
+    loadingBackground: "/images/background_1.png",
     
     userName: '',
 
@@ -29,6 +34,7 @@ Component({
   },
 
   attached() {
+    this._loadingRunning();
     this._initUserInfo();
     this._painter();
   },
@@ -37,6 +43,26 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    _loadingRunning() {
+      this.setInterval_1 = setInterval(() => {
+        this.setData({ loadingNumber: ++ this.data.loadingNumber });
+        if (this.data.loadingNumber == 99) {
+          clearInterval(this.setInterval_1);
+          this.setInterval_2 = setInterval(() => {
+            if (this.data.isCanvasReady) {
+              this.setData({ loadingNumber: 100 });
+              clearInterval(this.setInterval_2);
+              setTimeout(() => {
+                this.setData({ isPageReady: true });
+                this.setData({
+                  animation: this.anmt_slideDown()
+                });
+              }, 200);
+            }
+          }, 100);
+        };
+      }, 4 * 10);
+    },
     _initUserInfo() {
       getApp().MarkExam();
       const {userName, userScoreInfo, userCharacterInfo} = getApp().globalData;
@@ -55,44 +81,89 @@ Component({
       const ctx = wx.createCanvasContext('myCanvas', this);
       canvasPainter.preparePaint(ctx, this);
     },
-    _canvasToTempFilePath(callback) {
-      const screenWidth = getApp().globalData.screenWidth;
-      const { width, height, quality } = this.data;    
-      const rpx = screenWidth / 750 * quality;
-      let canvasWidth = width * rpx;
-      let canvasHeight = height * rpx;
-      console.log('_canvasToTempFilePath', canvasWidth, canvasHeight);
-      wx.canvasToTempFilePath({
-        x: 0,
-        y: 0,
-        width: canvasWidth,
-        height: canvasHeight,
-        destWidth: canvasWidth * 2,
-        destHeight: canvasHeight * 2,
-        canvasId: 'myCanvas',
-        success: res => {
-          callback && callback(res.tempFilePath);
+    onLongPress() {
+      const me = this;
+      wx.showActionSheet({
+        itemList: ['保存到相册', '再测一次'],
+        success(res) {
+          if (res.tapIndex == 0){
+            me._saveImageToPhotosAlbum(me.data.canvasImage).then((res) => {
+              wx.showToast({
+                title: '体验报告已存到你的相册，快转发至朋友圈吧~',
+                mask: true,
+                icon: 'none',
+              });
+            });
+          } else if (res.tapIndex == 1) {
+            wx.redirectTo({
+              url: '/package-exam/pages/exam-index/exam-index?page=1',
+            })
+          }
         },
-        fail: err => {
-          console.log('canvasToTempFilePath failed', err);
-        }
-      }, this);
-    },
-    _saveImageToPhotosAlbum() {
-      return new Promise((resolve,reject) => {
-        this._canvasToTempFilePath((path) => {
-          wx.saveImageToPhotosAlbum({
-            filePath: path,
-            success: res => {
-                console.log('saveImageToPhotosAlbum success')
-                resolve(res)
-            },
-            fail: err => {
-                reject(err)
-            }
-          })
-        });
       });
+    },
+    onTapWatchMovie() {
+      wx.showToast({
+        title: '播放防诈骗视频~',
+        mask: true,
+        icon: 'none',
+      });
+    },
+    _canvasToTempFilePath() {
+      return new Promise((resolve,reject) => {
+        const screenWidth = getApp().globalData.screenWidth;
+        const { width, height, quality } = this.data;    
+        const rpx = screenWidth / 750 * quality;
+        let canvasWidth = width * rpx;
+        let canvasHeight = height * rpx;
+        console.log('_canvasToTempFilePath', canvasWidth, canvasHeight);
+        wx.canvasToTempFilePath({
+          x: 0,
+          y: 0,
+          width: canvasWidth,
+          height: canvasHeight,
+          destWidth: canvasWidth * 2,
+          destHeight: canvasHeight * 2,
+          canvasId: 'myCanvas',
+          success: res => {
+            this._initPage(res);
+            resolve(res.tempFilePath);
+          },
+          fail: err => {
+            reject(err);
+            console.log('canvasToTempFilePath failed', err);
+          }
+        }, this);
+      });
+    },
+    _initPage(res) {
+      this.setData({canvasImage: res.tempFilePath});
+      this.setData({isCanvasReady: true});
+    },
+    _saveImageToPhotosAlbum(path) {
+      return new Promise((resolve,reject) => {
+        wx.saveImageToPhotosAlbum({
+          filePath: path,
+          success: res => {
+            console.log('saveImageToPhotosAlbum success')
+            resolve(res)
+          },
+          fail: err => {
+            reject(err)
+          }
+        })
+      });
+    },
+
+    anmt_slideDown() {
+      const Animation = wx.createAnimation({
+        duration: 600,
+        timingFunction: "linear",
+        delay: 0,
+        transformOrigin: "ease-out"
+      });
+      Animation.top(getApp().globalData["screenHeight"]).opacity(0.9).step();
+      return Animation.export();
     },
   }
 });
