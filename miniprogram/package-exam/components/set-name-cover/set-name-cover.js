@@ -1,4 +1,5 @@
 // package-exam/components/received-a-call/received-a-call.js
+import { invoke, invokeComponent, addComponentPage } from "../../../utils/page";
 Component({
   /**
    * 组件的属性列表
@@ -66,6 +67,11 @@ Component({
       getApp().globalData.userName = this.data.name;
       getApp().globalData.userSex = this.data.sex;
       console.log('getApp().globalData', getApp().globalData);
+      invokeComponent("package-exam/components/page_5/page_5", "_setUserName");
+      invokeComponent("package-exam/components/page_7/page_7", "_setUserName");
+      invokeComponent("package-exam/components/page_11/page_11", "_setUserName");
+      invokeComponent("package-exam/components/msg-cover_1/msg-cover_1", "_setUserName");
+      invokeComponent("package-exam/components/msg-cover_2/msg-cover_2", "_setUserName");
     },
     onSetName() {
       this.triggerEvent('onSetName');
