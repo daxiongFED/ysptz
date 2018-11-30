@@ -4,10 +4,10 @@
     <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
   </view>
   <view class="wrapper__content">
-    <view class="text--1">
-      <image src="/package-exam/res/bo.gif"></image>
+    <view class="text--1 {{part_animation.part_1 ? 'show' : ''}}">
+      <image src="/package-exam/res/bo.gif" mode="aspectFill"></image>
     </view>
-    <view class="text--2" bindtap="onTapAgain">
+    <view class="text--2 {{part_animation.part_2 ? 'show' : ''}}" bindtap="onTapAgain">
       <view class="icon--again">
           <image src="{{again}}"></image>
       </view>
@@ -16,8 +16,8 @@
       </view>
     </view>
     <view class="area__button--select">
-      <view class="g__button--select" bindtap="onTapButton" data-option='0'>好的，明天一定准时到</view>
-      <view class="g__button--select" bindtap="onTapButton" data-option='1'>要核实一下是哪位找我</view>
+      <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>好的，明天一定准时到</view>
+      <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>要核实一下是哪位找我</view>
     </view>
   </view>
 </view>

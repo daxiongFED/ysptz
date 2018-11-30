@@ -17,13 +17,15 @@ Component({
 
   attached() {
     addComponentPage(this);
-    // this._playBell();
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+    onPageShow() { 
+      this._playBell();
+    },
     _playBell() {
       this.Audio = wx.createInnerAudioContext();
       this.Audio.src = '/package-exam/res/bell.mp3';

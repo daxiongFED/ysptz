@@ -22,12 +22,27 @@
 }
 .wrapper__content .text--1 {
   font-size: 76rpx;
+  margin-top: 5vh;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.text--1 image {
+  height: 200rpx;
+}
+.text--1.show {
   margin-top: 12vh;
+  opacity: 1;
 }
 .text--2 {
-  margin-top: 250rpx;
+  margin-top: 80rpx;
   font-size: 30rpx;
   display: flex;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.text--2.show {
+  margin-top: 50rpx;
+  opacity: 1;
 }
 .text--2 .icon--again {
   margin-top: 5rpx;

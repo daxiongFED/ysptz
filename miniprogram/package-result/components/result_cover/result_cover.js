@@ -62,7 +62,7 @@ Component({
             }
           }, 100);
         };
-      }, 4 * 10);
+      }, 2 * 10);
     },
     _initUserInfo() {
       getApp().MarkExam();

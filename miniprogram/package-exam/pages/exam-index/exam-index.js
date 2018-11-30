@@ -17,7 +17,7 @@ Page({
     if (options && options.page) {
       this.switchPage({detail: options.page});
     }
-    this.switchPage({detail: 11});
+    this.switchPage({detail: 3});
   },
 
   /**
@@ -86,8 +86,8 @@ Page({
   _invoke(wantPageIndex) {
     switch(wantPageIndex) {
       case 1: invokeComponent("package-exam/components/page_1/page_1", "onPageShow");break;
-      case 2: invokeComponent("package-exam/components/page_2/page_2", "_playBell");break;
-      case 3: invokeComponent("package-exam/components/page_3/page_3", "_playStore");break;
+      case 2: invokeComponent("package-exam/components/page_2/page_2", "onPageShow");break;
+      case 3: invokeComponent("package-exam/components/page_3/page_3", "onPageShow");break;
       case 4: invokeComponent("package-exam/components/page_4/page_4", "onPageShow");break;
       case 5: invokeComponent("package-exam/components/page_5/page_5", "onPageShow");break;
       case 6: invokeComponent("package-exam/components/page_6/page_6", "onPageShow");break;

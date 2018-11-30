@@ -33,7 +33,6 @@ Component({
   methods: {
     onPageShow() {
       this._animation();
-      this._setUserName();
     },
     onTapButton(e) {
       const option = +e.currentTarget.dataset.option;

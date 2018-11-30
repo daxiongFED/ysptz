@@ -5,15 +5,15 @@
     </view>
     <view class="wrapper__content">
       <view class="block--1">
-        <view class="block--1__name">警务常识题</view>
-        <view class="block--1__text">以下那个说法是正确的？</view>
+        <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">警务常识题</view>
+        <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">以下那个说法是正确的？</view>
       </view>
       <view class="block--3">
         <view class="area__button--select">
-          <view class="g__button--select" bindtap="onTapButton" data-option='0'>能获得照片、户籍资料等准确个人信息的，不只有公安机关</view>
-          <view class="g__button--select" bindtap="onTapButton" data-option='1'>公安民警可以用QQ、微信、邮箱、链接等网络渠道发送通缉令给嫌疑人</view>
-          <view class="g__button--select" bindtap="onTapButton" data-option='2'>被警方通缉的嫌疑人，只要选择与警方合作就可以避免被抓捕</view>
-          <view class="g__button--select" bindtap="onTapButton" data-option='3'>重、特大刑事案件，应当由公、检、法机关联合侦办</view>
+          <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>能获得照片、户籍资料等准确个人信息的，不只有公安机关</view>
+          <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>公安民警可以用QQ、微信、邮箱、链接等网络渠道发送通缉令给嫌疑人</view>
+          <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>被警方通缉的嫌疑人，只要选择与警方合作就可以避免被抓捕</view>
+          <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>重、特大刑事案件，应当由公、检、法机关联合侦办</view>
         </view>
       </view>
     </view>
