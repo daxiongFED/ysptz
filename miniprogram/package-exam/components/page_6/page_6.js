@@ -18,17 +18,47 @@ Component({
     msg_body_2: "/package-exam/res/msg_body_2.png",
 
     windowHeight: getApp().globalData["windowHeight"],
+
+    part_animation: {
+      part_1: false,
+      part_2: false,
+      part_3: false,
+    },
+  },
+
+  attached() {
+    addComponentPage(this);
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+    onPageShow() {
+      this._animation();
+    },
+
     onTapPage() {
       this.setData({animation: animation.slideUp(300)});
+      invokeComponent("package-exam/components/msg-cover_1/msg-cover_1", "onPageShow");
     },
     onTapButton() {
       this.triggerEvent('switchPage', 7);
+    },
+    _animation() {
+      this.counter = this.counter || 1;
+      this.delay = [200, 800, 500];
+      const delay = this.delay[this.counter-1];
+      setTimeout(() => {
+        const part_animation = this.data.part_animation;
+        part_animation[`part_${this.counter}`] = true;
+        this.setData({part_animation});
+        this.counter ++;
+
+        if (this.counter <= this.delay.length) {
+          this._animation();
+        }
+      }, delay);
     },
   }
 });

@@ -4,18 +4,18 @@
       <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
     </view>
     <view class="wrapper__content">
-      <view class="block--1">
+      <view class="block--1 {{part_animation.part_1 ? 'show' : ''}}">
         <image src="{{picture_1}}" mode="widthFix"></image>
       </view>
       <view class="block--2">
-        <view class="block--2__name">你的直觉</view>
-        <view class="block--2__text">图中的女人她的情绪是怎样的？为何掩面？</view>
+        <view class="block--2__name {{part_animation.part_2 ? 'show' : ''}}">你的直觉</view>
+        <view class="block--2__text {{part_animation.part_3 ? 'show' : ''}}">图中的女人她的情绪是怎样的？为何掩面？</view>
       </view>
       <view class="block--3">
         <view class="area__button--select">
-          <view class="g__button--select" bindtap="onTapButton" data-option='0'>悲伤，女人发现丈夫的婚外情</view>
-          <view class="g__button--select" bindtap="onTapButton" data-option='1'>忧虑，丈夫醉酒躺在床上</view>
-          <view class="g__button--select" bindtap="onTapButton" data-option='2'>关心，丈夫病重躺在床上</view>
+          <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>悲伤，女人发现丈夫的婚外情</view>
+          <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>忧虑，丈夫醉酒躺在床上</view>
+          <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>关心，丈夫病重躺在床上</view>
         </view>
       </view>
     </view>

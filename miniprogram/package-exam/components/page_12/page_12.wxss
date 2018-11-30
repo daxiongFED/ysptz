@@ -24,7 +24,14 @@
   display: flex;
   width: 100%;
   justify-content: center;
+
+  margin-top: 100rpx;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.block--1.show {
   margin-top: 70rpx;
+  opacity: 1;
 }
 .block--1 image {
   width: 450rpx;

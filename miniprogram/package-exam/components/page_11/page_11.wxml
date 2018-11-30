@@ -4,11 +4,11 @@
     <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
   </view>
   <view class="wrapper__content wrapper__content--1">
-    <view class="text--1">{{name}}</view>
-    <view class="text--2">到目前为止，</view>
-    <view class="text--2">你做的都还不错。</view>
-    <view class="text--2">快完成了，</view>
-    <view class="text--2">来点简单的。</view>
-    <view class="text--3">轻触继续</view>
+    <view class="text text--1 {{part_animation.part_1 ? 'show' : ''}}">{{name}}</view>
+    <view class="text text--2 {{part_animation.part_2 ? 'show' : ''}}">到目前为止，</view>
+    <view class="text text--2 {{part_animation.part_3 ? 'show' : ''}}">你做的都还不错。</view>
+    <view class="text text--2 {{part_animation.part_4 ? 'show' : ''}}">快完成了，</view>
+    <view class="text text--2 {{part_animation.part_5 ? 'show' : ''}}">来点简单的。</view>
+    <view class="g__tips--bottom {{part_animation.part_6 ? 'show' : ''}}">轻触继续</view>
   </view>
 </view>

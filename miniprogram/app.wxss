@@ -23,7 +23,79 @@ page {
   padding:0 30rpx;
   line-height:54rpx;
   margin: 15rpx 0;
+  opacity: 0;
+  margin-top: 45rpx;
+  transition: all 700ms ease-out 0ms;
 }
 .g__button--select:active {
   color: #fff;
+}
+.g__button--select.show {
+  opacity: 1;
+  margin-top: 15rpx;
+}
+
+.g__tips--bottom {
+  color: #ffffff;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  position: absolute;
+  bottom: 100rpx;
+  animation:mymove 1s infinite;
+
+  margin-top: 30rpx;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.g__tips--bottom.show {
+  margin-top: 0rpx;
+  opacity: 1;
+}
+@keyframes mymove {
+  0% { bottom: 70rpx; }
+  50% { bottom: 90rpx; }
+  100% { bottom: 70rpx; }
+}
+
+.block--1__name {
+  margin-top: 30rpx;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.block--1__name.show {
+  margin-top: 0;
+  opacity: 1;
+
+}
+.block--1__text {
+  margin-top: 45rpx;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.block--1__text.show {
+  margin-top: 15rpx;
+  opacity: 1;
+}
+.block--2__name {
+  margin-top: 30rpx;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.block--2__name.show {
+  margin-top: 0;
+  opacity: 1;
+
+}
+.block--2__text {
+  margin-top: 45rpx;
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.block--2__text.show {
+  margin-top: 15rpx;
+  opacity: 1;
 }

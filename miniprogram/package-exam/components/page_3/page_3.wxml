@@ -4,7 +4,9 @@
     <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
   </view>
   <view class="wrapper__content">
-    <view class="text--1">音频波动条</view>
+    <view class="text--1">
+      <image src="/package-exam/res/bo.gif"></image>
+    </view>
     <view class="text--2" bindtap="onTapAgain">
       <view class="icon--again">
           <image src="{{again}}"></image>

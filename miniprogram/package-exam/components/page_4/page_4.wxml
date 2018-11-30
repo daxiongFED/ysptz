@@ -7,7 +7,7 @@
     <!-- <view class="circle"> -->
     <view class="container">
         <view class="circle" bindtap="onTapSetName">
-          <view class="circle__name" hidden="{{show_setNameCover}}">
+          <view class="circle__name {{part_animation.part_1 ? 'show' : ''}}" hidden="{{show_setNameCover}}">
             <view class="circle__name--1">你的</view>
             <view class="circle__name--2">名字</view>
           </view>
@@ -16,7 +16,7 @@
         <view class="pulse_2" hidden="{{show_setNameCover}}"></view>
     </view>
   </view>
-  <view hidden="{{!show_setNameCover}}">
+  <view class="wrapper--cover" animation="{{animation}}" style="top:{{windowHeight}}px;">
     <set-name-cover bind:onSetName="onSetName"></set-name-cover>
   </view>
 </view>

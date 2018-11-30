@@ -11,6 +11,7 @@ Component({
    */
   data: {
     background_1: "/images/background_1.png",
+    bo: "/package-exam/res/bo.gif",
     again: "/package-exam/res/again.png",
   },
 

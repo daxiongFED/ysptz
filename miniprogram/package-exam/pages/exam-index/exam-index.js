@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentPageIndex: 1,
+    currentPageIndex: 0,
   },
 
   /**
@@ -17,8 +17,7 @@ Page({
     if (options && options.page) {
       this.switchPage({detail: options.page});
     }
-    this._style(1);
-    // this.switchPage({detail: 6}); // mock
+    this.switchPage({detail: 11});
   },
 
   /**
@@ -85,10 +84,21 @@ Page({
     });
   },
   _invoke(wantPageIndex) {
-    debugger;
     switch(wantPageIndex) {
+      case 1: invokeComponent("package-exam/components/page_1/page_1", "onPageShow");break;
       case 2: invokeComponent("package-exam/components/page_2/page_2", "_playBell");break;
       case 3: invokeComponent("package-exam/components/page_3/page_3", "_playStore");break;
+      case 4: invokeComponent("package-exam/components/page_4/page_4", "onPageShow");break;
+      case 5: invokeComponent("package-exam/components/page_5/page_5", "onPageShow");break;
+      case 6: invokeComponent("package-exam/components/page_6/page_6", "onPageShow");break;
+      case 7: invokeComponent("package-exam/components/page_7/page_7", "onPageShow");break;
+      case 8: invokeComponent("package-exam/components/page_8/page_8", "onPageShow");break;
+      case 9: invokeComponent("package-exam/components/page_9/page_9", "onPageShow");break;
+      case 10: invokeComponent("package-exam/components/page_10/page_10", "onPageShow");break;
+      case 11: invokeComponent("package-exam/components/page_11/page_11", "onPageShow");break;
+      case 12: invokeComponent("package-exam/components/page_12/page_12", "onPageShow");break;
+      case 13: invokeComponent("package-exam/components/page_13/page_13", "onPageShow");break;
+      case 14: invokeComponent("package-exam/components/page_14/page_14", "onPageShow");break;
     }
   },
   _animation(beforePageIndex, wantPageIndex) {

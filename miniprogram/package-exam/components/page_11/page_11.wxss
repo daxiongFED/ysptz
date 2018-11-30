@@ -21,14 +21,21 @@
 }
 .wrapper__content--1 .text--1 {
   font-size: 100rpx;
-  margin-top: 35vh;
-  margin: 20vh 80rpx 30rpx;
+  margin: 0 80rpx 30rpx;
   font-weight: 600;
+  margin-top: calc(15vh + 30rpx);
+}
+.text--1.show {
+  margin-top: 25vh;
 }
 .wrapper__content--1 .text--2 {
   font-size: 60rpx;
   margin: 0 80rpx;
   line-height: 100rpx;
+  margin-top: 30rpx;
+}
+.text--2.show {
+  margin-top: 0;
 }
 .wrapper__content--1 .text--3 {
   width: 100%;
@@ -36,4 +43,12 @@
   font-size: 24rpx;
   position: absolute;
   bottom: 50rpx;
+}
+.text {
+  opacity: 0;
+  transition: all 700ms ease-out 0ms;
+}
+.text.show {
+  opacity: 1;
+  transition: all 700ms ease-out 0ms;
 }

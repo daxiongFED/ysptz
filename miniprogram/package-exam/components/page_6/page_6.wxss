@@ -48,6 +48,13 @@
 }
 .body .message {
   margin: 20rpx 0 0 20rpx;
+  opacity: 0;
+  margin-top: 50rpx;
+  transition: all 700ms ease-out 0ms;
+}
+.body .message.show {
+  opacity: 1;
+  margin-top: 20rpx;
 }
 .body .message image {
   width: 600rpx;
@@ -61,7 +68,21 @@
   width: 100%;
 
   position: absolute;
-  bottom: 50rpx;
+  bottom: 70rpx;
+  animation:mymove 1s infinite;
+
+  opacity: 0;
+  margin-top: 30rpx;
+  transition: all 700ms ease-out 0ms;
+}
+@keyframes mymove {
+  0% { bottom: 70rpx; }
+  50% { bottom: 90rpx; }
+  100% { bottom: 70rpx; }
+}
+.body .tap_tips.show {
+  opacity: 1;
+  margin: 0;
 }
 .footer {
   position: absolute;
