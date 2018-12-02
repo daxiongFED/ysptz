@@ -5,7 +5,8 @@
   </view>
   <view class="wrapper__content">
     <view class="text--1 {{part_animation.part_1 ? 'show' : ''}}">
-      <image src="/package-exam/res/bo.gif" mode="aspectFill"></image>
+      <image wx:if="{{boRunning}}" src="/package-exam/res/bo.gif" mode="aspectFill"></image>
+      <image wx:else src="/package-exam/res/bo_stop.gif" mode="aspectFill"></image>
     </view>
     <view class="text--2 {{part_animation.part_2 ? 'show' : ''}}" bindtap="onTapAgain">
       <view class="icon--again">

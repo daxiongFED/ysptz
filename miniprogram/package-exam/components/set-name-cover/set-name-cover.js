@@ -33,17 +33,17 @@ Component({
       }
     },
     validate() {
-      const name_length = this.data.name ? this.data.name.trim().length : 0;
-      if (name_length == 0) {
+      const name = this.data.name ? this.data.name.trim() : '';
+      if (name.length == 0) {
         wx.showToast({
           title: '请输入您的名字',
           mask: true,
           icon: 'none',
         });
         return false;
-      } else if (name_length > 5) {
+      } else if (this._getByteLen(name) > 10) {
         wx.showToast({
-          title: '名字请不要超过5位',
+          title: '名字请不要超过5个汉字或10个字母',
           mask: true,
           icon: 'none',
         });
@@ -76,5 +76,17 @@ Component({
     onSetName() {
       this.triggerEvent('onSetName');
     },
+    _getByteLen(val) {
+      var len = 0;
+      for (var i = 0; i < val.length; i++) {
+        var length = val.charCodeAt(i);
+        if(length >= 0 && length <= 128) {
+          len += 1;
+        } else {
+          len += 2;
+        }
+      }
+      return len;
+    }
   }
 });

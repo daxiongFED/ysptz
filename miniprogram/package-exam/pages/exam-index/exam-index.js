@@ -17,7 +17,7 @@ Page({
     if (options && options.page) {
       this.switchPage({detail: options.page});
     }
-    this.switchPage({detail: 13});
+    this.switchPage({detail: 4});
   },
 
   /**

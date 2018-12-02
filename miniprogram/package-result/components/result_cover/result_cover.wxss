@@ -52,7 +52,7 @@
 }
 .block__handle--watchMovie {
   position: absolute;
-  top: 630rpx;
+  top: calc(50vh - 80rpx);
   right: 50rpx;
   width: 330rpx;
   height: 60rpx;
