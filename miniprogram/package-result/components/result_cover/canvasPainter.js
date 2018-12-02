@@ -129,7 +129,7 @@ function _startPaint(ctx, that) {
     }, 580);
 
     // 二维码
-    ctx.drawImage(QRCode, 620*rpx, 1085*rpx, 100*rpx, 100*rpx);
+    ctx.drawImage(QRCode, 620*rpx, 10851s*rpx, 100*rpx, 100*rpx);
 
     ctx.draw(false, res => { resolve(res) });
   })
