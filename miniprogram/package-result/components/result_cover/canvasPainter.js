@@ -39,7 +39,7 @@ function preparePaint(ctx, that) {
 let rpx;
 function _startPaint(ctx, that) {
   const { width, height, quality } = that.data;
-  const { userName, userTitle,  userTitleDesc, userRank, userAdj, userAdjDesc, userPosition, userPositionDesc, QRCode} = that.data;
+  const { userName, userTitle,  userTitleDesc, userRank, userRankValue, userAdj, userAdjDesc, userPosition, userPositionDesc, QRCode} = that.data;
 
   return new Promise((resolve, reject) => {
     let screenWidth = getApp().globalData.screenWidth;
@@ -66,7 +66,7 @@ function _startPaint(ctx, that) {
     })
     
     // 称号
-    ctx.drawImage(userTitle, 80*rpx, 200*rpx, 600*rpx, 138*rpx);
+    ctx.drawImage(userTitle, 80*rpx, 190*rpx, 600*rpx, 165.5*rpx);
 
     // 称号描述
     fillText(ctx, {
@@ -97,6 +97,14 @@ function _startPaint(ctx, that) {
       y: 675,
       color: '#FF0000',
     });
+
+    // 排名百分比线段
+    
+    const totalWidth = 614;
+    const redWidth = totalWidth * userRankValue / 100;
+    const blackWidth = totalWidth * (1 - userRankValue / 100);
+    fillLine(ctx, 68, 692, redWidth, 'red');
+    fillLine(ctx, 68 + redWidth, 692, blackWidth, 'black');
 
     // 形容词
     fillText(ctx, {
@@ -129,7 +137,7 @@ function _startPaint(ctx, that) {
     }, 580);
 
     // 二维码
-    ctx.drawImage(QRCode, 620*rpx, 10851s*rpx, 100*rpx, 100*rpx);
+    ctx.drawImage(QRCode, 620*rpx, 1085*rpx, 100*rpx, 100*rpx);
 
     ctx.draw(false, res => { resolve(res) });
   })
@@ -165,7 +173,16 @@ function fillText(ctx, textObj, width) {
   newTextArray.forEach((item, index) => {
     ctx.fillText(item, x * rpx, (y + (fontsize + 10) * index) * rpx);
   });
-}
+};
+function fillLine(ctx, x, y, width, color) {
+  ctx.beginPath();
+  ctx.moveTo(x*rpx, y*rpx);
+  ctx.lineTo(x*rpx + width*rpx, y*rpx);
+  ctx.setStrokeStyle(color);
+  ctx.setLineWidth(7);
+  ctx.stroke()
+  ctx.closePath();
+};
 function roundRect(ctx, x, y, w, h, r) {
   if (w < 2 * r) r = w / 2;
   if (h < 2 * r) r = h / 2;

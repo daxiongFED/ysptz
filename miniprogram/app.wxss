@@ -10,6 +10,7 @@ page {
   box-sizing: border-box;
 } 
 .g__button--select {
+  position: relative;
   background: linear-gradient(to right, #D5DC21, #F8EA21 , #F7AC3B);
   width: 560rpx;
   height: 90rpx;
@@ -24,7 +25,8 @@ page {
   line-height:54rpx;
   /* margin: 15rpx 0; */
   opacity: 0;
-  margin-top: -30rpx;
+  top: -30rpx;
+  margin-bottom: 30rpx;
   transition: all 700ms ease-out 0ms;
 }
 .g__button--select:active {
@@ -32,7 +34,7 @@ page {
 }
 .g__button--select.show {
   opacity: 1;
-  margin-top: 30rpx;
+  top: 30rpx;
 }
 
 .g__tips--bottom {

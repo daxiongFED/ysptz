@@ -9,9 +9,9 @@
       <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">周四，你接到一个自称通讯局的电话</view>
     </view>
     <view class="block--2">
-      <image class="{{part_animation.part_3 ? 'show' : ''}}" src="{{article_1}}" mode="widthFix"></image>
+      <image class="{{part_animation.part_3 ? 'show' : ''}}" src="{{article_2_1}}" mode="widthFix"></image>
       <view class="block--2__text {{part_animation.part_4 ? 'show' : ''}}">随后，电话中所谓的警官告诉你：</view>
-      <image class="{{part_animation.part_5 ? 'show' : ''}}" src="{{article_2}}" mode="widthFix"></image>
+      <image class="{{part_animation.part_5 ? 'show' : ''}}" src="{{article_2_2}}" mode="widthFix"></image>
       <view class="block--2_tips g__tips--bottom {{part_animation.part_6 ? 'show' : ''}}">轻触继续</view>
     </view>
   </view>

@@ -13,7 +13,7 @@ Component({
     msg_cover_bg: '/package-exam/res/msg_cover_bg.png',
     
     name: '',
-    
+
     part_animation: {
       part_1: false,
       part_2: false,
@@ -40,13 +40,14 @@ Component({
       this.setData({name: getApp().globalData.userName});
     },
     onTapButton(e) {
+      getApp().playTap();
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[4] = option;
       this.triggerEvent('onTapButton');
     },
     _animation() {
       this.counter = this.counter || 1;
-      this.delay = [200, 500, 500, 500, 500, 500];
+      this.delay = [0, 200, 500, 500, 500, 500];
       const delay = this.delay[this.counter-1];
       setTimeout(() => {
         const part_animation = this.data.part_animation;

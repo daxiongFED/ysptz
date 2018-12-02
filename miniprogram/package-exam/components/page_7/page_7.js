@@ -12,8 +12,8 @@ Component({
    */
   data: {
     background_1: "/images/background_1.png",
-    article_1: "/package-exam/res/article_1.png",
-    article_2: "/package-exam/res/article_2.png",
+    article_2_1: "/package-exam/res/article_2_1.png",
+    article_2_2: "/package-exam/res/article_2_2.png",
 
     windowHeight: getApp().globalData["windowHeight"],
 
@@ -49,6 +49,7 @@ Component({
       invokeComponent("package-exam/components/msg-cover_2/msg-cover_2", "onPageShow");
     },
     onTapButton() {
+      getApp().playTap();
       this.triggerEvent('switchPage', 8);
     },
     _animation() {

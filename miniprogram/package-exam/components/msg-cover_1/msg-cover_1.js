@@ -40,6 +40,7 @@ Component({
       this.setData({name: getApp().globalData.userName});
     },
     onTapButton(e) {
+      getApp().playTap();
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[3] = option;
       this.triggerEvent('onTapButton');

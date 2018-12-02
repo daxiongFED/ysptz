@@ -5,7 +5,7 @@
   </view>
   <view class="wrapper__content">
     <view class="block--1">
-      <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">{{name}}</view>
+      <!-- <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">{{name}}</view> -->
       <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">看到这条短信，你会作何选择</view>
     </view>
     <view class="block--3">

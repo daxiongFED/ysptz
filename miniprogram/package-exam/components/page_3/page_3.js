@@ -46,6 +46,7 @@ Component({
       }, 100);
     },
     onTapButton(e) {
+      getApp().playTap();
       this.Audio.stop();
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[1] = option;

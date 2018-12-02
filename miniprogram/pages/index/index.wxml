@@ -1,6 +1,9 @@
 <!--index.wxml-->
 <page-title title="易受骗体质">
   <view class="page">
-    建设中
+    <view class="loading">
+      <image src="/images/loading.gif" mode="widthFix"></image>
+    </view>
+    <!-- 加载中，请稍后... -->
   </view>
 </page-title>

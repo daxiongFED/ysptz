@@ -46,13 +46,15 @@
   opacity: 1;
 }
 .block--2 {
-  margin: 80rpx 100rpx 60rpx;
-  width: 560rpx;
+  margin: 80rpx 60rpx 60rpx;
   position: relative;
   color: #fff;
   opacity: 0;
   margin-top: 30rpx;
   transition: all 700ms ease-out 0ms;
+}
+.block--2 image{
+  width: 630rpx;
 }
 .block--2.show {
   opacity: 1;

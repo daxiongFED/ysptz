@@ -11,6 +11,7 @@ Component({
    */
   data: {
     background_1: "/images/background_1.png",
+    article_1: "/package-exam/res/article_1.png",
 
     name: '',
 
@@ -33,7 +34,7 @@ Component({
    */
   methods: {
     onPageShow() {
-      debugger;
+      getApp().playBGM();
       this._setUserName();
       this._animation();
     },
@@ -42,6 +43,7 @@ Component({
       console.log('name', this.data.name);
     },
     onTapButton(e) {
+      getApp().playTap();
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[2] = option;
       this.triggerEvent('switchPage', 6);

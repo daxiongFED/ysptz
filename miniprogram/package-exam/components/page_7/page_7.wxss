@@ -55,6 +55,8 @@
   color: #fff;
 }
 .block--2 image {
+  margin: 0 60rpx;
+  width: 630rpx;
   margin-top: 30rpx;
   opacity: 0;
   transition: all 700ms ease-out 0ms;

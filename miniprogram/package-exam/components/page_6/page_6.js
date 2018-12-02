@@ -36,6 +36,7 @@ Component({
   methods: {
     onPageShow() {
       this._animation();
+      this._playMsgMusic();
     },
 
     onTapPage() {
@@ -43,6 +44,7 @@ Component({
       invokeComponent("package-exam/components/msg-cover_1/msg-cover_1", "onPageShow");
     },
     onTapButton() {
+      getApp().playTap();
       this.triggerEvent('switchPage', 7);
     },
     _animation() {
@@ -59,6 +61,14 @@ Component({
           this._animation();
         }
       }, delay);
+    },
+    _playMsgMusic() {
+      setTimeout(() => {
+        getApp().playMsg();
+        setTimeout(() => {
+          getApp().playMsg();
+        }, this.delay[1]);
+      }, this.delay[0]);
     },
   }
 });

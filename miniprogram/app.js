@@ -54,7 +54,8 @@ App({
           titleDesc: '你连电话都懒得接听，往好的方面讲，骗子也确实不好骗一个不听他电话的人。',
           position: '佛系人群',
           positionDesc: '我也懒得和你多说了，就这样吧。',
-          ranking: '1%的罕见人物'
+          ranking: '1%的罕见人物',
+          rankingValue: 1,
         },
         101: {
           titleIndex: 1,
@@ -62,7 +63,8 @@ App({
           titleDesc: '你就是江湖上的传说，俗称祖师爷，不出去害人就很好了。记得多多传授反诈骗知识给身边的朋友。',
           position: '殿堂人物',
           positionDesc: '什么妖魔鬼怪的骗局都能被你一一封杀。',
-          ranking: '3%的罕见人物'
+          ranking: '3%的罕见人物',
+          rankingValue: 3,
         },
         91:  {
           titleIndex: 3,
@@ -70,7 +72,8 @@ App({
           titleDesc: '拥有超强防骗意识、身怀绝技、处变不惊的反诈老司机。',
           position: '膜拜对象',
           positionDesc: '被骗绝缘体，应当被膜拜。',
-          ranking: '5%的稀有群体'
+          ranking: '5%的稀有群体',
+          rankingValue: 5,
         },
         81:  {
           titleIndex: 4,
@@ -78,7 +81,8 @@ App({
           titleDesc: '你天生拥有火眼金睛，总能一眼识破骗局，至今维持被骗O记录。',
           position: '反诈大佬',
           positionDesc: '骗子见你绕道走，绝无返场。',
-          ranking: '15%的小众群体'
+          ranking: '15%的小众群体',
+          rankingValue: 15,
         },
         71:  {
           titleIndex: 5,
@@ -86,7 +90,8 @@ App({
           titleDesc: '你具备一定的反诈骗知识和防范能力，从不相信天上掉馅饼，骗子对你总是无从下手。',
           position: '反诈少侠',
           positionDesc: '能从骗子堆中脱围而出的朋友，都很硬核。',
-          ranking: '25%的大众群体'
+          ranking: '25%的大众群体',
+          rankingValue: 25,
         },
         61:  {
           titleIndex: 6,
@@ -94,7 +99,8 @@ App({
           titleDesc: '你的求生欲很强，遇到险情总能及时止损，但行骗新套路不断，要及时更新防骗知识库存哟。',
           position: '反诈先锋',
           positionDesc: '再接再厉，学习新知识，解锁新技能。',
-          ranking: '30%的大众群体'
+          ranking: '30%的大众群体',
+          rankingValue: 30,
         },
         51:  {
           titleIndex: 7,
@@ -102,7 +108,8 @@ App({
           titleDesc: '你的思路清晰，但遇到腹黑行骗高手偶尔也会当机。',
           position: '反诈新手',
           positionDesc: '老铁，打怪升级路上还得时刻保持警惕。',
-          ranking: '30%的大众群体'
+          ranking: '30%的大众群体',
+          rankingValue: 30,
         },
         41:  {
           titleIndex: 8,
@@ -110,7 +117,8 @@ App({
           titleDesc: '你是骗子们最喜欢PICK的反射弧超长的呆萌宝宝，快去恶补反诈骗知识吧！',
           position: '保护对象',
           positionDesc: '日常寻求票圈各路亲朋好友仗义相助。',
-          ranking: '15%的小众群体'
+          ranking: '15%的小众群体',
+          rankingValue: 15,
         },
         31:  {
           titleIndex: 9,
@@ -118,7 +126,8 @@ App({
           titleDesc: '你对骗子深恶痛绝，但对此又力不从心，日常被骗只能半夜嘤嘤嘤，哭泣到天明。',
           position: '待割韭菜',
           positionDesc: '韭菜长了一茬又一茬，小心被收割…',
-          ranking: '8%的稀有群体'
+          ranking: '8%的稀有群体',
+          rankingValue: 8,
         },
         21:  {
           titleIndex: 10,
@@ -126,7 +135,8 @@ App({
           titleDesc: '吃一堑长一智，纵使日常被骗，千疮百孔也要勇往直前，提高防范鸭~',
           position: '待割韭菜',
           positionDesc: '韭菜长了一茬又一茬，小心被收割…',
-          ranking: '3%的罕见人物'
+          ranking: '3%的罕见人物',
+          rankingValue: 3,
         },
         11:  {
           titleIndex: 11,
@@ -134,7 +144,8 @@ App({
           titleDesc: '这位兄dei，还记得那些年上过的天台吗？悬梁苦读反诈知识才是渡劫之道啊！',
           position: '待割韭菜',
           positionDesc: '韭菜长了一茬又一茬，小心被收割…',
-          ranking: '1%的罕见人物'
+          ranking: '1%的罕见人物',
+          rankingValue: 1,
         },
         1:   {
           titleIndex: 11,
@@ -142,7 +153,8 @@ App({
           titleDesc: '这位兄dei，还记得那些年上过的天台吗？悬梁苦读反诈知识才是渡劫之道啊！',
           position: '待割韭菜',
           positionDesc: '韭菜长了一茬又一茬，小心被收割…',
-          ranking: '1%的罕见人物'
+          ranking: '1%的罕见人物',
+          rankingValue: 1,
         },
       },
       totalScore: 101, // 总分
@@ -237,5 +249,24 @@ App({
     });
     _returnCharacterIndex = targetIndex[Math.floor(Math.random() * targetIndex.length)];
     return this.globalData.characterMap[_returnCharacterIndex];
+  },
+
+  playBGM() {
+    this.Audio = wx.createInnerAudioContext();
+    this.Audio.src = '/music/bgm.mp3';
+    this.Audio.loop = true;
+    this.Audio.play();
+  },
+  playTap() {
+    this.Audio = wx.createInnerAudioContext();
+    this.Audio.src = '/music/tap.mp3';
+    // this.Audio.loop = true;
+    this.Audio.play();
+  },
+  playMsg() {
+    this.Audio = wx.createInnerAudioContext();
+    this.Audio.src = '/music/msg.mp3';
+    // this.Audio.loop = true;
+    this.Audio.play();
   },
 })

@@ -35,6 +35,7 @@ Component({
       this._animation();
     },
     onTapButton(e) {
+      getApp().playTap();
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[10] = option;
       // this.triggerEvent('switchPage', 1);

@@ -8,4 +8,13 @@
   font-size: 40rpx;
   color: #333;
   overflow: hidden;
+  position: relative;
+}
+.loading {
+  position: absolute;
+  top: 120rpx;
+}
+.loading image {
+  width: 60rpx;
+  height: 10rpx;
 }

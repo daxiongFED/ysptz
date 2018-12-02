@@ -73,6 +73,7 @@ Component({
         userTitle: `/package-result/res/title_${userScoreInfo.titleIndex}.png`,
         userTitleDesc: userScoreInfo.titleDesc,
         userRank: userScoreInfo.ranking,
+        userRankValue: userScoreInfo.rankingValue,
         userAdj: userCharacterInfo.adj,
         userAdjDesc: userCharacterInfo.adjDesc,
         userPosition: userScoreInfo.position,
@@ -129,7 +130,6 @@ Component({
           destHeight: canvasHeight * 2,
           canvasId: 'myCanvas',
           success: res => {
-            debugger;
             this._initPage(res);
             resolve(res.tempFilePath);
           },
