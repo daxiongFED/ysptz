@@ -1,0 +1,6 @@
+<!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view class="page" bindtap="onTapBG">
+  <view catchtap="catchTapBG" style="width: 100%;">
+    <video src="cloud://ysptz-2025aa.7973-ysptz-2025aa/珠海市公安局 反诈骗中心 完整版.mp4" direction="90"-></video>
+  </view>
+</view>

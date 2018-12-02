@@ -2,6 +2,9 @@
 <!-- 易受骗体质 -->
 <page-title title="你的易受骗体质">
   <view class="page">
-    <result_cover></result_cover>
+    <result_cover bind:showMovie="onShowMovie"></result_cover>
+    <view wx:if="{{showMovie}}">
+      <result_movie bind:hideMovie="onHideMovie"></result_movie>
+    </view>
   </view>
 </page-title>

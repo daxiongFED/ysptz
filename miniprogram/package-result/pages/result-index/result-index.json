@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "page-title": "/components/page-title/page-title",
-    "result_cover": "../../components/result_cover/result_cover"
+    "result_cover": "../../components/result_cover/result_cover",
+    "result_movie": "../../components/result_movie/result_movie"
   }
 }

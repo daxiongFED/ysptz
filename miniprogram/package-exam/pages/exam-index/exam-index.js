@@ -17,7 +17,7 @@ Page({
     if (options && options.page) {
       this.switchPage({detail: options.page});
     }
-    this.switchPage({detail: 4});
+    this.switchPage({detail: 1});
   },
 
   /**
@@ -68,7 +68,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '珠海市公安局反诈骗中心，制作了一款测试你是否容易被骗的检测小程序，快来测试一下吧！',
+      imageUrl: '',
+      path: 'pages/index/index',
+    }
   },
   
   // 切换模块

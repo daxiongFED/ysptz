@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showMovie: false,
   },
 
   /**
@@ -60,6 +61,16 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '珠海市公安局反诈骗中心，制作了一款测试你是否容易被骗的检测小程序，快来测试一下吧！',
+      imageUrl: '',
+      path: 'pages/index/index',
+    }
   },
+  onShowMovie() {
+    this.setData({showMovie: true});
+  },
+  onHideMovie() {
+    this.setData({showMovie: false});
+  }
 })

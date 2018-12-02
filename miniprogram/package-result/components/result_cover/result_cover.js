@@ -107,11 +107,12 @@ Component({
       });
     },
     onTapWatchMovie() {
-      wx.showToast({
-        title: '播放防诈骗视频~',
-        mask: true,
-        icon: 'none',
-      });
+      this.triggerEvent('showMovie');
+      // wx.showToast({
+      //   title: '播放防诈骗视频~',
+      //   mask: true,
+      //   icon: 'none',
+      // });
     },
     _canvasToTempFilePath() {
       return new Promise((resolve,reject) => {

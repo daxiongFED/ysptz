@@ -30,14 +30,16 @@
 .text--1 {
   /* position: absolute; */
   font-size: 52rpx;
+  font-weight: 600;
   margin-top: calc(35vh + 30rpx);
-}
+  }
 .text--1.show {
   margin-top: 35vh;
 }
 .text--2 {
   /* position: absolute; */
   font-size: 52rpx;
+  font-weight: 600;
   margin-top: 40rpx;
 }
 .text--2.show {

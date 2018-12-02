@@ -32,7 +32,11 @@ Component({
       this._animation();
     },
     onTapPage() {
-      this.triggerEvent('switchPage', 2);
+      if (this.animation_finish) {
+        this.triggerEvent('switchPage', 2);
+      } else {
+        this._showAllPart();
+      }
     },
     _animation() {
       this.counter = this.counter || 1;
@@ -44,10 +48,20 @@ Component({
         this.setData({part_animation});
         this.counter ++;
 
-        if (this.counter <= 4) {
+        if (this.counter <= this.delay.length) {
           this._animation();
+        } else {
+          this.animation_finish = true;
         }
       }, delay);
+    },
+    _showAllPart() {
+      const part_animation = this.data.part_animation;
+      this.delay.forEach((item, index) => {
+        part_animation[`part_${index + 1}`] = true;
+      });
+      this.setData({part_animation});
+      this.animation_finish = true;
     },
   }
 });
