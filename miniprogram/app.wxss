@@ -74,12 +74,12 @@ page {
 
 }
 .block--1__text {
-  margin-top: 45rpx;
+  margin-top: 35rpx;
   opacity: 0;
   transition: all 700ms ease-out 0ms;
 }
 .block--1__text.show {
-  margin-top: 15rpx;
+  margin-top: 5rpx;
   opacity: 1;
 }
 .block--2__name {
@@ -93,11 +93,11 @@ page {
 
 }
 .block--2__text {
-  margin-top: 45rpx;
+  margin-top: 35rpx;
   opacity: 0;
   transition: all 700ms ease-out 0ms;
 }
 .block--2__text.show {
-  margin-top: 15rpx;
+  margin-top: 5rpx;
   opacity: 1;
 }

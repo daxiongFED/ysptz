@@ -27,7 +27,8 @@
   transition: all 700ms ease-out 0ms;
 }
 .text--1 image {
-  height: 300rpx;
+  height:320rpx;
+  width:750rpx;
 }
 .text--1.show {
   margin-top: 12vh;
@@ -61,4 +62,7 @@
   flex-direction: column;
 }
 .g__button--select {
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }

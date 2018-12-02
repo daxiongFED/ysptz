@@ -6,14 +6,14 @@
   <view class="wrapper__content">
     <view class="block--1">
       <!-- <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">{{name}}</view> -->
-      <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">看到这条短信，你会作何选择</view>
+      <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">接到这个电话，你又打算如何应对</view>
     </view>
     <view class="block--3">
       <view class="area__button--select">
-        <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>先试着干一票，如果赚钱了拉亲朋好友一起做，毕竟赚钱的机会不能错过</view>
-        <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>偷偷自己做，不要告诉别人这种天上掉馅饼的好事，我太机智了</view>
-        <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>我外甥女刚好没上班，我工作这么忙就算了，推荐给她吧</view>
-        <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>不理睬，删掉信息</view>
+        <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>都看到通缉令了，幸好知道是冒用了我的信息，按他的要求办，准没错</view>
+        <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>拨打114查询对方号码是否公安局的</view>
+        <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>保密信息，为了证明我的清白、撤销通缉令，按他要求办</view>
+        <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>拨打110报警电话</view>
       </view>
     </view>
   </view>

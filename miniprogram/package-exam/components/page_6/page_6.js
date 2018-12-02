@@ -40,6 +40,7 @@ Component({
     },
 
     onTapPage() {
+      getApp().playXiu();
       this.setData({animation: animation.slideUp(300)});
       invokeComponent("package-exam/components/msg-cover_1/msg-cover_1", "onPageShow");
     },

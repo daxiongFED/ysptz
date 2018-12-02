@@ -252,21 +252,30 @@ App({
   },
 
   playBGM() {
-    this.Audio = wx.createInnerAudioContext();
-    this.Audio.src = '/music/bgm.mp3';
-    this.Audio.loop = true;
-    this.Audio.play();
+    this.Audio_BGM = wx.createInnerAudioContext();
+    this.Audio_BGM.src = '/music/bgm.mp3';
+    this.Audio_BGM.loop = true;
+    this.Audio_BGM.play();
+  },
+  stopBGM() {
+    this.Audio_BGM && this.Audio_BGM.stop();
   },
   playTap() {
-    this.Audio = wx.createInnerAudioContext();
-    this.Audio.src = '/music/tap.mp3';
+    this.Audio_Tap = wx.createInnerAudioContext();
+    this.Audio_Tap.src = '/music/tap.mp3';
     // this.Audio.loop = true;
-    this.Audio.play();
+    this.Audio_Tap.play();
   },
   playMsg() {
-    this.Audio = wx.createInnerAudioContext();
-    this.Audio.src = '/music/msg.mp3';
+    this.Audio_Msg = wx.createInnerAudioContext();
+    this.Audio_Msg.src = '/music/msg.mp3';
     // this.Audio.loop = true;
-    this.Audio.play();
+    this.Audio_Msg.play();
+  },
+  playXiu() {
+    this.Audio_Xiu = wx.createInnerAudioContext();
+    this.Audio_Xiu.src = '/music/xiu.mp3';
+    // this.Audio.loop = true;
+    this.Audio_Xiu.play();
   },
 })

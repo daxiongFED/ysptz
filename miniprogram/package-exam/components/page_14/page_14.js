@@ -40,6 +40,7 @@ Component({
       getApp().globalData.userAnswer[10] = option;
       // this.triggerEvent('switchPage', 1);
       // wx.navigateTo({
+      getApp().stopBGM();
       wx.redirectTo({
         // url: '/package-exam/pages/exam-index/exam-index',
         url: '/package-result/pages/result-index/result-index',
