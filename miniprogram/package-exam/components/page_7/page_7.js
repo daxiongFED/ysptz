@@ -45,7 +45,8 @@ Component({
       this.setData({name: getApp().globalData.userName});
     },
     onTapPage() {
-      getApp().playXiu();
+      !this.Xiued && getApp().playXiu();
+      this.Xiued = true;
       this.setData({animation: animation.slideUp(300)});
       invokeComponent("package-exam/components/msg-cover_2/msg-cover_2", "onPageShow");
     },

@@ -261,6 +261,7 @@ App({
     this.Audio_BGM && this.Audio_BGM.stop();
   },
   playTap() {
+    this.Audio_Tap = null;
     this.Audio_Tap = wx.createInnerAudioContext();
     this.Audio_Tap.src = '/music/tap.mp3';
     // this.Audio.loop = true;
