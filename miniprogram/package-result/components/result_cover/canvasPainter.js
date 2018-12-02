@@ -39,7 +39,7 @@ function preparePaint(ctx, that) {
 let rpx;
 function _startPaint(ctx, that) {
   const { width, height, quality } = that.data;
-  const { userName, userTitle,  userTitleDesc, userRank, userAdj, userAdjDesc, userPosition, userPositionDesc} = that.data;
+  const { userName, userTitle,  userTitleDesc, userRank, userAdj, userAdjDesc, userPosition, userPositionDesc, QRCode} = that.data;
 
   return new Promise((resolve, reject) => {
     let screenWidth = getApp().globalData.screenWidth;
@@ -127,6 +127,9 @@ function _startPaint(ctx, that) {
       color: '#000',
       bold: true,
     }, 580);
+
+    // 二维码
+    ctx.drawImage(QRCode, 620*rpx, 1085*rpx, 100*rpx, 100*rpx);
 
     ctx.draw(false, res => { resolve(res) });
   })

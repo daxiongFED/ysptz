@@ -27,7 +27,7 @@
   transition: all 700ms ease-out 0ms;
 }
 .text--1 image {
-  height: 200rpx;
+  height: 300rpx;
 }
 .text--1.show {
   margin-top: 12vh;

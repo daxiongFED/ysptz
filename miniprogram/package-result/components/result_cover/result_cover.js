@@ -20,6 +20,7 @@ Component({
     quality: 2,
     background: "/package-result/res/result_page_600.png",
     loadingBackground: "/images/background_1.png",
+    QRCode: "/package-result/res/QRCode.jpeg",
     
     userName: '',
 
@@ -128,6 +129,7 @@ Component({
           destHeight: canvasHeight * 2,
           canvasId: 'myCanvas',
           success: res => {
+            debugger;
             this._initPage(res);
             resolve(res.tempFilePath);
           },

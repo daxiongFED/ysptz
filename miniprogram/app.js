@@ -3,7 +3,7 @@ App({
   onLaunch() {
     this.globalData = {
       questionCount: 11, // 题目总数
-      rightAnswers: [1, 1, 2, 0, 3, 2, 0, 2, 0, 0, 4], // 正确答案数组 第一项为0，第二项为1，如此类推
+      rightAnswers: [1, 1, 2, 3, 3, 2, 0, 2, 0, 0, 4], // 正确答案数组 第一项为0，第二项为1，如此类推
       characterMap: {
         0: {
           adj: '隐藏的',
@@ -117,7 +117,7 @@ App({
           title: '瑟瑟发抖',
           titleDesc: '你对骗子深恶痛绝，但对此又力不从心，日常被骗只能半夜嘤嘤嘤，哭泣到天明。',
           position: '待割韭菜',
-          positionDesc: '韭菜长了一茬又一茬，骗子们收割了一轮又一轮…',
+          positionDesc: '韭菜长了一茬又一茬，小心被收割…',
           ranking: '8%的稀有群体'
         },
         21:  {
@@ -125,7 +125,7 @@ App({
           title: '望勿弃疗',
           titleDesc: '吃一堑长一智，纵使日常被骗，千疮百孔也要勇往直前，提高防范鸭~',
           position: '待割韭菜',
-          positionDesc: '韭菜长了一茬又一茬，骗子们收割了一轮又一轮…',
+          positionDesc: '韭菜长了一茬又一茬，小心被收割…',
           ranking: '3%的罕见人物'
         },
         11:  {
@@ -133,7 +133,7 @@ App({
           title: '身残志坚',
           titleDesc: '这位兄dei，还记得那些年上过的天台吗？悬梁苦读反诈知识才是渡劫之道啊！',
           position: '待割韭菜',
-          positionDesc: '韭菜长了一茬又一茬，骗子们收割了一轮又一轮…',
+          positionDesc: '韭菜长了一茬又一茬，小心被收割…',
           ranking: '1%的罕见人物'
         },
         1:   {
@@ -141,7 +141,7 @@ App({
           title: '身残志坚',
           titleDesc: '这位兄dei，还记得那些年上过的天台吗？悬梁苦读反诈知识才是渡劫之道啊！',
           position: '待割韭菜',
-          positionDesc: '韭菜长了一茬又一茬，骗子们收割了一轮又一轮…',
+          positionDesc: '韭菜长了一茬又一茬，小心被收割…',
           ranking: '1%的罕见人物'
         },
       },
@@ -190,7 +190,7 @@ App({
   MarkExam() {
     const userCharacterList = [];
     let {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter, scoreMap} = this.globalData;
-    // userAnswer = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    userAnswer = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
     userAnswer.forEach((item, index) => {
       if (item == rightAnswers[index]) {
       } else {
