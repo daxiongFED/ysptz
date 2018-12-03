@@ -62,8 +62,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: '珠海市公安局反诈骗中心，制作了一款测试你是否容易被骗的检测小程序，快来测试一下吧！',
-      imageUrl: '',
+      title: '珠海市公安局反诈骗中心发布了测试你是否容易被骗的小程序，快来测试一下吧！',
+      imageUrl: '/images/shareCover.png',
       path: 'pages/index/index',
     }
   },
