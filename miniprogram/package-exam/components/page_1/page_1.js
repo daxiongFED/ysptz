@@ -30,6 +30,7 @@ Component({
   methods: {
     onPageShow() {
       this._animation();
+      getApp().globalData.startTime = new Date();
     },
     onTapPage() {
       if (this.animation_finish) {

@@ -40,10 +40,11 @@ Component({
       if (option == 1) {
         this.triggerEvent('switchPage', 3);
       } else if (option == 0) {
+        getApp().globalData.finishTime = new Date();
         wx.redirectTo({
           // url: '/package-exam/pages/exam-index/exam-index',
           url: '/package-result/pages/result-index/result-index',
-        })
+        });
       }
     },
   }

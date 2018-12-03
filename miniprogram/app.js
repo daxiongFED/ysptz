@@ -165,6 +165,14 @@ App({
       userScore: 101, // 用户得分
       userScoreInfo: {}, // 用户得分对应的信息
       userCharacterInfo: {}, // 用户得分对应的信息
+      startTime: null, // 用户开始答题时间
+      finishTime: null, // 用户完成答题时间
+
+      hasShare: false, // 用户是否有分享小程序
+      hasSaveResult: false, // 用户是否将结果保存至相册
+      hasTry: false, // 用户是否再测一次
+      tryTimes: 0, // 用户测试次数
+      hasWatchedMovie: false, // 用户是否有观看影片
     };
     const me = this;
     const name = 'iPhone X';
@@ -200,6 +208,7 @@ App({
     this.globalData.userCharacterInfo = {};
   },
   MarkExam() {
+    this.globalData.tryTimes ++;
     const userCharacterList = [];
     let {userAnswer, userScore, rightAnswers, characterMap, optionsWithCharacter, scoreMap} = this.globalData;
     // userAnswer = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
@@ -222,10 +231,43 @@ App({
     console.log('userCharacter', userCharacter);
     this.globalData['userScoreInfo'] = scoreMap[userScore];
     this.globalData['userCharacterInfo'] = userCharacter;
-
+    this.SaveToCloudDataBase();
     // mock
     // this.globalData['userScoreInfo'] = scoreMap[11];
     // this.globalData['userCharacterInfo'] = this.globalData.characterMap[6];
+  },
+  SaveToCloudDataBase() {
+    const db = wx.cloud.database('ysptz');
+    db.collection('users').add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        userName: this.globalData.userName,
+        userSex: this.globalData.userSex,
+        userAnswer: this.globalData.userAnswer,
+        userScore: this.globalData.userScore,
+
+        valueA: this.globalData.userScoreInfo.title,
+        valueB: this.globalData.userScoreInfo.titleDesc,
+        valueC: this.globalData.userCharacterInfo.adj,
+        valueD: this.globalData.userScoreInfo.position,
+        valueE: this.globalData.userCharacterInfo.adjDesc,
+        valueF: this.globalData.userScoreInfo.positionDesc,
+
+        startTime: this.globalData.startTime.toLocaleString(),
+        finishTime: this.globalData.finishTime.toLocaleString(),
+        timeCost: this.globalData.finishTime - this.globalData.startTime,
+
+        hasShare: this.globalData.hasShare,
+        hasSaveResult: this.globalData.hasSaveResult,
+        hasTry: this.globalData.hasTry,
+        tryTimes: this.globalData.tryTimes, 
+        hasWatchedMovie: this.globalData.hasWatchedMovie,
+      },
+      success: function(res) {
+        // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+        console.log('=== 云数据库保存成功 ===', res);
+      }
+    });
   },
   _getCharacterByList(userCharacterList) {
     let _returnCharacterIndex;

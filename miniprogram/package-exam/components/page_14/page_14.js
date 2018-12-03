@@ -35,6 +35,7 @@ Component({
       this._animation();
     },
     onTapButton(e) {
+      getApp().globalData.finishTime = new Date();
       getApp().playTap();
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[10] = option;
