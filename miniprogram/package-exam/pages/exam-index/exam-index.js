@@ -69,6 +69,7 @@ Page({
    */
   onShareAppMessage: function () {
     getApp().globalData.hasShare = true;
+    getApp().updateCloudData();
     return {
       title: '珠海市公安局反诈骗中心发布了测试你是否容易被骗的小程序，快来测试一下吧！',
       imageUrl: '/images/shareCover.png',
