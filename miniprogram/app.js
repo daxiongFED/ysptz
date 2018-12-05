@@ -223,6 +223,7 @@ App({
       }
       userCharacterList.push(optionsWithCharacter[index][item]);
     });
+    this.globalData.userScore = userScore;
     const userCharacter = this._getCharacterByList(userCharacterList);
     console.log('userScore', userScore);
     console.log('userAnswer', userAnswer);
@@ -259,6 +260,7 @@ App({
       data: me._getSaveToCloudData(),
       success(res) {
         console.log(res.data)
+        console.log('=== 云数据库更新成功 ===', res);
       }
     });
   },
