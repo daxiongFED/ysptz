@@ -13,7 +13,7 @@
           <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>被电话告知你网络购物出现系统故障，需要你加QQ退款给你</view>
           <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>某P2P网贷公司的低息贷款，无手续费无需抵押、不查征信，身份证就能贷</view>
           <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>某赌徒声称因为澳门赌博输了钱，有块价值20万的劳力士以4万卖给了当铺</view>
-          <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>朋友圈看到，可以免费赠送羽毛球拍、自行车、手机等</view>
+          <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>网上交友认识，称有投资平台的内幕或知晓漏洞可以赚大钱</view>
           <view class="g__button--select {{part_animation.part_7 ? 'show' : ''}}" bindtap="onTapButton" data-option='4'>某新兴大型互联网金融平台，高达25%年化收益率，按天计息、随存随取</view>
         </view>
       </view>

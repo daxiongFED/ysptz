@@ -23,7 +23,7 @@
       <view class="area__button--select">
         <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>宝贝孩子生命要紧，立即按李老师要求将钱汇到银行卡中</view>
         <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>回拨对方提供的班主任李老师的电话向李老师核实一下孩子的情况</view>
-        <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>先赶往学校，了解事情的起因后再决定</view>
+        <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>先赶往学校或医院，了解事情的起因后再决定</view>
       </view>
     </view>
   </view>
