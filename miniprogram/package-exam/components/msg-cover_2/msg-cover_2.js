@@ -44,6 +44,7 @@ Component({
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[4] = option;
       this.triggerEvent('onTapButton');
+      getApp().SaveToCloudDataBase();
     },
     _animation() {
       this.counter = this.counter || 1;

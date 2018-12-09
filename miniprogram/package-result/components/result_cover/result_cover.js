@@ -92,7 +92,7 @@ Component({
         success(res) {
           if (res.tapIndex == 0){
             getApp().globalData.hasSaveResult = true;
-            getApp().updateCloudData();
+            getApp().SaveToCloudDataBase();
             me._saveImageToPhotosAlbum(me.data.canvasImage).then((res) => {
               wx.showToast({
                 title: '体验报告已存到你的相册，快转发至朋友圈吧~',
@@ -102,7 +102,7 @@ Component({
             });
           } else if (res.tapIndex == 1) {
             getApp().globalData.hasTry = true;
-            getApp().updateCloudData();
+            getApp().SaveToCloudDataBase();
             getApp().clearUserData();
             wx.redirectTo({
               url: '/package-exam/pages/exam-index/exam-index?page=1',
@@ -113,7 +113,7 @@ Component({
     },
     onTapWatchMovie() {
       getApp().globalData.hasWatchedMovie = true;
-      getApp().updateCloudData();
+      getApp().SaveToCloudDataBase();
       this.triggerEvent('showMovie');
       // wx.showToast({
       //   title: '播放防诈骗视频~',

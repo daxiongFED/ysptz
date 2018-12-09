@@ -55,7 +55,7 @@ Component({
       this.Audio.stop();
       const option = +e.currentTarget.dataset.option;
       getApp().globalData.userAnswer[1] = option;
-      this.triggerEvent('switchPage', 4);
+      this.triggerEvent('switchPage', 5);
     },
     _animation() {
       this.counter = this.counter || 1;

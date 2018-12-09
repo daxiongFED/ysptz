@@ -14,10 +14,17 @@ Component({
     sex: null,
   },
 
+  attached() {
+    addComponentPage(this);
+  },
+
   /**
    * 组件的方法列表
    */
   methods: {
+    onPageShow() {
+      this.setData({userName: getApp().globalData.userName});
+    },
     onTapSelect(e) {
       const sex = e.currentTarget.dataset.sex;
       this.setData({sex});
@@ -34,6 +41,7 @@ Component({
     },
     validate() {
       const name = this.data.name ? this.data.name.trim() : '';
+      console.log('mameLength', this._getByteLen(name));
       if (name.length == 0) {
         wx.showToast({
           title: '请输入您的名字',
@@ -41,9 +49,9 @@ Component({
           icon: 'none',
         });
         return false;
-      } else if (this._getByteLen(name) > 10) {
+      } else if (this._getByteLen(name) > 14) {
         wx.showToast({
-          title: '名字请不要超过5个汉字或10个字母',
+          title: '名字请不要超过7个汉字或14个字母',
           mask: true,
           icon: 'none',
         });
@@ -66,15 +74,10 @@ Component({
       const userSetInfo = wx.getStorageSync('userSetInfo');
       getApp().globalData.userName = this.data.name;
       getApp().globalData.userSex = this.data.sex;
-      console.log('getApp().globalData', getApp().globalData);
-      invokeComponent("package-exam/components/page_5/page_5", "_setUserName");
-      invokeComponent("package-exam/components/page_7/page_7", "_setUserName");
-      invokeComponent("package-exam/components/page_11/page_11", "_setUserName");
-      invokeComponent("package-exam/components/msg-cover_1/msg-cover_1", "_setUserName");
-      invokeComponent("package-exam/components/msg-cover_2/msg-cover_2", "_setUserName");
     },
     onSetName() {
       this.triggerEvent('onSetName');
+      getApp().SaveToCloudDataBase();
     },
     _getByteLen(val) {
       var len = 0;

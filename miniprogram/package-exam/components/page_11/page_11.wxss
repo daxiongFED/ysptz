@@ -20,6 +20,7 @@
   color: #fff;
 }
 .wrapper__content--1 .text--1 {
+  word-break:break-all;
   font-size: 100rpx;
   margin: 0 80rpx 30rpx;
   font-weight: 600;

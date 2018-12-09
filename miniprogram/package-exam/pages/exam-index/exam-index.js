@@ -17,7 +17,7 @@ Page({
     if (options && options.page) {
       this.switchPage({detail: options.page});
     }
-    this.switchPage({detail: 1});
+    this.switchPage({detail: 4});
   },
 
   /**
@@ -69,7 +69,7 @@ Page({
    */
   onShareAppMessage: function () {
     getApp().globalData.hasShare = true;
-    getApp().updateCloudData();
+    getApp().SaveToCloudDataBase();
     return {
       title: '珠海市公安局反诈骗中心发布了测试你是否容易被骗的小程序，快来测试一下吧！',
       imageUrl: '/images/shareCover.png',
@@ -88,6 +88,7 @@ Page({
       this._invoke(this.wantPageIndex);
       this.setData({currentPageIndex: this.wantPageIndex});
     });
+    getApp().SaveToCloudDataBase();
   },
   _invoke(wantPageIndex) {
     switch(wantPageIndex) {

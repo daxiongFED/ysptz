@@ -173,6 +173,10 @@ App({
       hasTry: false, // 用户是否再测一次
       tryTimes: 0, // 用户测试次数
       hasWatchedMovie: false, // 用户是否有观看影片
+
+      userLocation: '', // 用户所在位置（需授权）
+      userWXInfo: {}, // 用户微信个人信息（需授权）
+    
     };
     const me = this;
     const name = 'iPhone X';
@@ -200,7 +204,6 @@ App({
     })
   },
   clearUserData() {
-    this.globalData.userName = '无名哥';
     this.globalData.userSex = '';
     this.globalData.userAnswer = [];
     this.globalData.userScore = 101;
@@ -239,30 +242,30 @@ App({
   },
   SaveToCloudDataBase() {
     const me = this;
-    const db = wx.cloud.database('ysptz');
-    db.collection('users').add({
-      // data 字段表示需新增的 JSON 数据
-      data: this._getSaveToCloudData(),
-      success(res) {
-        // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-        me.globalData.cloudId = res._id;
-        console.log('=== 云数据库保存成功 ===', res);
-      }
-    });
-  },
-  updateCloudData() {
-    const me = this;
     const cloudId = me.globalData.cloudId;
-    if (!cloudId) {return;};
     const db = wx.cloud.database('ysptz');
-    db.collection('users').doc(cloudId).update({
-      // data 传入需要局部更新的数据
-      data: me._getSaveToCloudData(),
-      success(res) {
-        console.log(res.data)
-        console.log('=== 云数据库更新成功 ===', res);
-      }
-    });
+    if (!cloudId) {
+      db.collection('users').add({
+        // data 字段表示需新增的 JSON 数据
+        data: this._getSaveToCloudData(),
+        success(res) {
+          // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+          me.globalData.cloudId = res._id;
+          console.log('=== 云数据库保存成功 ===', res);
+          console.log('=== 数据 ===', me._getSaveToCloudData());
+        }
+      });
+    } else {
+      db.collection('users').doc(cloudId).update({
+        // data 传入需要局部更新的数据
+        data: me._getSaveToCloudData(),
+        success(res) {
+          console.log(res.data)
+          console.log('=== 云数据库更新成功 ===', res);
+          console.log('=== 数据 ===', me._getSaveToCloudData());
+        }
+      });
+    };
   },
   _getSaveToCloudData() {
     return {
@@ -278,8 +281,8 @@ App({
       valueE: this.globalData.userCharacterInfo.adjDesc,
       valueF: this.globalData.userScoreInfo.positionDesc,
 
-      startTime: this.globalData.startTime.toLocaleString(),
-      finishTime: this.globalData.finishTime.toLocaleString(),
+      startTime: this.globalData.startTime ? this.globalData.startTime.toLocaleString() : '',
+      finishTime: this.globalData.finishTime ? this.globalData.finishTime.toLocaleString() : '',
       timeCost: this.globalData.finishTime - this.globalData.startTime,
 
       hasShare: this.globalData.hasShare,
@@ -287,6 +290,9 @@ App({
       hasTry: this.globalData.hasTry,
       tryTimes: this.globalData.tryTimes,
       hasWatchedMovie: this.globalData.hasWatchedMovie,
+
+      userLocation: this.globalData.userLocation,
+      userWXInfo: this.globalData.userWXInfo,
     };
   },
   _getCharacterByList(userCharacterList) {

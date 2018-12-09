@@ -30,12 +30,24 @@ Component({
     onPageShow() {
       this._animation();
     },
-    onTapSetName() {
+    onTapSetName(e) {
+      if (e.detail.userInfo) {
+        this.setData({
+          avatarUrl: e.detail.userInfo.avatarUrl,
+          userInfo: e.detail.userInfo
+        });
+        getApp().globalData['userName'] = e.detail.userInfo.nickName;
+        getApp().globalData['userLocation'] = e.detail.userInfo.country +' '+ e.detail.userInfo.province +' '+ e.detail.userInfo.city;
+        getApp().globalData['userWXInfo'] = e.detail;
+        console.log('getUserInfo', e);
+        getApp().SaveToCloudDataBase();
+      }
+      invokeComponent("package-exam/components/set-name-cover/set-name-cover", "onPageShow");
       this.setData({animation: animation.slideUp(300)});
     },
     onSetName(e) {
       console.log(e);
-      this.triggerEvent('switchPage', 5);
+      this.triggerEvent('switchPage', 1);
     },
     _animation() {
       this.counter = this.counter || 1;
