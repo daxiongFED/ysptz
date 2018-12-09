@@ -1,4 +1,5 @@
 /* package-exam/components/received-a-call/received-a-call.wxss */
+@import '../../../app.wxss';
 .page {
   width: 100%;
   height: 100vh;

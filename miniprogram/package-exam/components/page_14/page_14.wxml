@@ -1,21 +1,22 @@
 <!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view wx:if="{{!animation_finish}}" class="mask--animation" bindtap="onTapAnmtMask"></view>
 <view class="page">
-    <view class="wrapper--bg">
-      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  <view class="wrapper--bg">
+    <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  </view>
+  <view class="wrapper__content">
+    <view class="block--1">
+      <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">银行常识题</view>
+      <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">以下哪个说法是正确的？</view>
     </view>
-    <view class="wrapper__content">
-      <view class="block--1">
-        <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">银行常识题</view>
-        <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">以下哪个说法是正确的？</view>
-      </view>
-      <view class="block--3">
-        <view class="area__button--select">
-          <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>只要银行卡在我身上，卡上的钱就不会被取走</view>
-          <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>通过电话银行办理业务，我需要口头告知客服银行账号和密码</view>
-          <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>银行或公安局都有安全账户，我只要转过去核实后，都会自动还给我</view>
-          <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>来电显示是银行的客服号码，就不会错</view>
-          <view class="g__button--select {{part_animation.part_7 ? 'show' : ''}}" bindtap="onTapButton" data-option='4'>验证码相当于临时密码，不能告诉他人</view>
-        </view>
+    <view class="block--3">
+      <view class="area__button--select">
+        <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>只要银行卡在我身上，卡上的钱就不会被取走</view>
+        <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>通过电话银行办理业务，我需要口头告知客服银行账号和密码</view>
+        <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>银行或公安局都有安全账户，我只要转过去核实后，都会自动还给我</view>
+        <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>来电显示是银行的客服号码，就不会错</view>
+        <view class="g__button--select {{part_animation.part_7 ? 'show' : ''}}" bindtap="onTapButton" data-option='4'>验证码相当于临时密码，不能告诉他人</view>
       </view>
     </view>
   </view>
+</view>

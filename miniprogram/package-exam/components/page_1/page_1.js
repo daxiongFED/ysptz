@@ -33,11 +33,7 @@ Component({
       getApp().globalData.startTime = new Date();
     },
     onTapPage() {
-      if (this.animation_finish) {
-        this.triggerEvent('switchPage', 2);
-      } else {
-        this._showAllPart();
-      }
+      this.triggerEvent('switchPage', 2);
     },
     _animation() {
       this.counter = this.counter || 1;
@@ -52,17 +48,12 @@ Component({
         if (this.counter <= this.delay.length) {
           this._animation();
         } else {
-          this.animation_finish = true;
+          this.setData({animation_finish: true});
         }
       }, delay);
     },
-    _showAllPart() {
-      const part_animation = this.data.part_animation;
-      this.delay.forEach((item, index) => {
-        part_animation[`part_${index + 1}`] = true;
-      });
-      this.setData({part_animation});
-      this.animation_finish = true;
+    onTapAnmtMask() {
+      getApp().util_showAllPart(this);
     },
   }
 });

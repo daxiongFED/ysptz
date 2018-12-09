@@ -61,6 +61,8 @@ Component({
 
         if (this.counter <= this.delay.length) {
           this._animation();
+        } else {
+          this.setData({animation_finish: true});
         }
       }, delay);
     },
@@ -71,6 +73,9 @@ Component({
           getApp().playMsg();
         }, this.delay[1]);
       }, this.delay[0]);
+    },
+    onTapAnmtMask() {
+      getApp().util_showAllPart(this);
     },
   }
 });

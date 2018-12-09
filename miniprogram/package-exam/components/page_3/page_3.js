@@ -67,10 +67,15 @@ Component({
         this.setData({part_animation});
         this.counter ++;
 
-        if (this.counter <= 4) {
+        if (this.counter <= this.delay.length) {
           this._animation();
+        } else {
+          this.setData({animation_finish: true});
         }
       }, delay);
+    },
+    onTapAnmtMask() {
+      getApp().util_showAllPart(this);
     },
   }
 });

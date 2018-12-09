@@ -101,3 +101,13 @@ page {
   margin-top: 5rpx;
   opacity: 1;
 }
+/* 动画蒙层 */
+.mask--animation {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* background: rgba(0, 0, 0, 0.2); */
+}

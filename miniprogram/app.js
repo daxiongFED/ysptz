@@ -341,4 +341,14 @@ App({
     // this.Audio.loop = true;
     this.Audio_Xiu.play();
   },
+
+
+  util_showAllPart(that) {
+    const part_animation = that.data.part_animation;
+    that.delay.forEach((item, index) => {
+      part_animation[`part_${index + 1}`] = true;
+    });
+    that.setData({part_animation});
+    that.setData({animation_finish: true});
+  },
 })

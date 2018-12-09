@@ -1,21 +1,22 @@
 <!-- package-exam/components/received-a-call/received-a-call.wxml -->
+<view wx:if="{{!animation_finish}}" class="mask--animation" bindtap="onTapAnmtMask"></view>
 <view class="page">
-    <view class="wrapper--bg">
-      <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  <view class="wrapper--bg">
+    <image class="c-img-bg" src="{{background_1}}" mode="aspectFill"></image>
+  </view>
+  <view class="wrapper__content">
+    <view class="block--1">
+      <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">电信常识题</view>
+      <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">以下哪个说法是正确的？</view>
     </view>
-    <view class="wrapper__content">
-      <view class="block--1">
-        <view class="block--1__name {{part_animation.part_1 ? 'show' : ''}}">电信常识题</view>
-        <view class="block--1__text {{part_animation.part_2 ? 'show' : ''}}">以下哪个说法是正确的？</view>
-      </view>
-      <view class="block--3">
-        <view class="area__button--select">
-          <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>手机SIM卡是可以被复制，变成两张同时使用的</view>
-          <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>来电显示的座机号码，只要拨打114查号台核实正确，就基本无误了</view>
-          <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>领导用私人的手机号打电话给我，说明他对我的信任</view>
-          <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>来电显示的号码是不能被更改的</view>
-          <view class="g__button--select {{part_animation.part_7 ? 'show' : ''}}" bindtap="onTapButton" data-option='4'>400开头的号码，一般是大企业的客服电话，比较可信</view>
-        </view>
+    <view class="block--3">
+      <view class="area__button--select">
+        <view class="g__button--select {{part_animation.part_3 ? 'show' : ''}}" bindtap="onTapButton" data-option='0'>手机SIM卡是可以被复制，变成两张同时使用的</view>
+        <view class="g__button--select {{part_animation.part_4 ? 'show' : ''}}" bindtap="onTapButton" data-option='1'>来电显示的座机号码，只要拨打114查号台核实正确，就基本无误了</view>
+        <view class="g__button--select {{part_animation.part_5 ? 'show' : ''}}" bindtap="onTapButton" data-option='2'>领导用私人的手机号打电话给我，说明他对我的信任</view>
+        <view class="g__button--select {{part_animation.part_6 ? 'show' : ''}}" bindtap="onTapButton" data-option='3'>来电显示的号码是不能被更改的</view>
+        <view class="g__button--select {{part_animation.part_7 ? 'show' : ''}}" bindtap="onTapButton" data-option='4'>400开头的号码，一般是大企业的客服电话，比较可信</view>
       </view>
     </view>
   </view>
+</view>
